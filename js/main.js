@@ -78,27 +78,27 @@ const initGsapAnimations = () => {
 
     gsap.from('#hero h1', {
       opacity: 0,
-      y: 40,
-      duration: 1,
-      ease: 'power3.out',
-      delay: 0.2,
+      y: 24,
+      duration: 1.2,
+      ease: 'power2.out',
+      delay: 0.25,
     });
 
     gsap.from('#hero p, #hero .btn-primary, #hero a[href^="tel:"]', {
       opacity: 0,
-      y: 30,
-      duration: 1,
-      ease: 'power3.out',
-      stagger: 0.15,
-      delay: 0.4,
+      y: 18,
+      duration: 1.2,
+      ease: 'power2.out',
+      stagger: 0.12,
+      delay: 0.45,
     });
 
     gsap.utils.toArray('.feature-card, .review-card, .amenity-card, .gallery-item, #horarios .reveal').forEach((section) => {
       gsap.from(section, {
         opacity: 0,
-        y: 36,
-        duration: 1,
-        ease: 'power3.out',
+        y: 22,
+        duration: 1.1,
+        ease: 'power2.out',
         scrollTrigger: {
           trigger: section,
           start: 'top 92%',
@@ -113,28 +113,28 @@ const initGsapAnimations = () => {
         trigger: heroSection,
         start: 'top top',
         end: 'bottom top',
-        scrub: true,
+        scrub: 0.6,
       },
     });
 
     gsap.to('#nosotros .relative', {
-      yPercent: 12,
+      yPercent: 10,
       ease: 'none',
       scrollTrigger: {
         trigger: '#nosotros',
         start: 'top bottom',
         end: 'bottom top',
-        scrub: true,
+        scrub: 0.6,
       },
     });
 
     const menuCards = gsap.utils.toArray('.feature-card');
     gsap.from(menuCards, {
       opacity: 0,
-      y: 40,
-      duration: 1,
-      ease: 'power3.out',
-      stagger: 0.18,
+      y: 20,
+      duration: 1.2,
+      ease: 'power2.out',
+      stagger: 0.14,
       scrollTrigger: {
         trigger: '#destacados',
         start: 'top 85%',

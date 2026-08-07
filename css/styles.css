@@ -42,7 +42,7 @@ body {
 
 #mainNav.solid {
   background: rgba(18,18,18,0.88);
-  backdrop-filter: blur(16px);
+  backdrop-filter: blur(12px);
 }
 
 .btn-primary,
@@ -57,8 +57,8 @@ body {
 
 .reveal {
   opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transform: translateY(18px);
+  transition: opacity 0.7s cubic-bezier(.22,.9,.26,1), transform 0.7s cubic-bezier(.22,.9,.26,1);
 }
 
 .reveal.revealed {
@@ -113,7 +113,23 @@ body {
 }
 
 .shadow-2xl {
-  box-shadow: 0 35px 90px -45px rgba(0,0,0,0.35);
+  box-shadow: 0 28px 70px -36px rgba(0,0,0,0.28);
+}
+
+/* Wood texture background for sections */
+.wood-bg {
+  background-image: linear-gradient(180deg, rgba(0,0,0,0.06), rgba(0,0,0,0.02)), url('../assets/images/wood-texture.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Reduced spacing for headings */
+.font-serif {
+  line-height: 1.02;
+}
+
+.section-title {
+  margin-bottom: 0.6rem;
 }
 
 * {
@@ -123,6 +139,26 @@ body {
 img {
   display: block;
   max-width: 100%;
+}
+
+/* Tighter headings spacing */
+h1, h2, h3 {
+  margin-bottom: 0.5rem;
+}
+
+/* Make cards and panels appear as cream panels over wood texture */
+.feature-card,
+.amenity-card,
+.review-card,
+.rounded-[32px],
+.gallery-item,
+.container > .rounded-[40px] {
+  background: rgba(246,239,231,0.95) !important;
+}
+
+/* Ensure text remains legible on wood background */
+body.wood-bg {
+  color: #111827;
 }
 
 button,

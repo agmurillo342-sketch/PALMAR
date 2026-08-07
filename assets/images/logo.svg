@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 80" preserveAspectRatio="xMidYMid meet">
+  <rect width="240" height="80" rx="12" fill="#3a1f12"/>
+  <g transform="translate(18,10)">
+    <text x="20" y="46" font-family="Playfair Display, serif" font-size="38" fill="#F6EFE7" font-weight="700">Terraza</text>
+    <text x="20" y="66" font-family="Inter, sans-serif" font-size="12" fill="#C9A46C">Tapas Lounge</text>
+  </g>
+</svg>

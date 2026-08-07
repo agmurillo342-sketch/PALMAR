@@ -14,7 +14,7 @@
       property="og:description"
       content="Tapas españolas, desayunos tempranos, terraza y cócteles en Tapachula. Terraza: Tapas Lounge, experiencia premium y cálida."
     />
-    <meta property="og:image" content="assets/images/hero.svg" />
+    <meta property="og:image" content="assets/images/hero.jpg" />
     <meta property="og:locale" content="es_MX" />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -44,7 +44,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/styles.css" />
   </head>
-  <body class="bg-crema text-carbon antialiased overflow-x-hidden">
+  <body class="wood-bg text-carbon antialiased overflow-x-hidden">
     <div id="preloader" class="fixed inset-0 z-50 flex items-center justify-center bg-carbon text-crema">
       <div class="animate-fade-scale text-center">
         <div class="mb-4 text-4xl font-serif">Terraza</div>
@@ -54,7 +54,9 @@
 
     <header class="fixed inset-x-0 top-0 z-40 transition duration-300" id="mainNav">
       <nav class="container mx-auto flex items-center justify-between px-5 py-4 lg:px-8">
-        <a href="#hero" class="text-xl font-serif tracking-[0.24em] text-crema">Terraza</a>
+        <a href="#hero" class="flex items-center gap-3 text-xl font-serif tracking-[0.24em] text-crema"> 
+          <img src="assets/images/logo.png" alt="Terraza logo" class="h-8 w-auto rounded-sm" />
+        </a>
         <div class="hidden items-center gap-8 md:flex">
           <a href="#nosotros" class="text-sm uppercase tracking-[0.22em] text-crema/80 transition hover:text-crema">Nosotros</a>
           <a href="#destacados" class="text-sm uppercase tracking-[0.22em] text-crema/80 transition hover:text-crema">Menú</a>
@@ -93,7 +95,7 @@
     </header>
 
     <main>
-      <section id="hero" class="relative flex min-h-screen items-end overflow-hidden bg-cover bg-center pt-24" style="background-image: linear-gradient(rgba(18,18,18,0.55), rgba(18,18,18,0.55)), url('assets/images/hero.svg');">
+      <section id="hero" class="relative flex min-h-screen items-end overflow-hidden bg-cover bg-center pt-24" style="background-image: linear-gradient(rgba(18,18,18,0.55), rgba(18,18,18,0.55)), url('assets/images/hero.jpg');">
         <div class="absolute inset-0 bg-gradient-to-b from-black/25 via-transparent to-black/75"></div>
         <div class="container mx-auto flex min-h-[calc(100vh-96px)] flex-col justify-end px-5 pb-20 text-center text-crema lg:px-8">
           <div class="relative z-10 mx-auto max-w-3xl">
@@ -450,7 +452,7 @@
         "@context": "https://schema.org",
         "@type": "Restaurant",
         "name": "Terraza: Tapas Lounge",
-        "image": "assets/images/hero.svg",
+        "image": "assets/images/hero.jpg",
         "@id": "",
         "url": "https://terrazatapaslounge.example.com",
         "telephone": "+529626955184",
