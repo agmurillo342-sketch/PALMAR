@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terraza: Tapas Lounge | Restaurante Español en Tapachula, Chiapas</title>
+    <meta
+      name="description"
+      content="Terraza: Tapas Lounge en Tapachula ofrece tapas españolas, desayunos, bar de vinos y terraza al aire libre con un ambiente moderno y sofisticado. Reserva ya."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Terraza: Tapas Lounge | Restaurante Español en Tapachula, Chiapas" />
+    <meta
+      property="og:description"
+      content="Tapas españolas, desayunos tempranos, terraza y cócteles en Tapachula. Terraza: Tapas Lounge, experiencia premium y cálida."
+    />
+    <meta property="og:image" content="assets/images/hero.svg" />
+    <meta property="og:locale" content="es_MX" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              terracota: '#B5451B',
+              crema: '#F6EFE7',
+              carbon: '#121212',
+              dorado: '#C9A46C',
+            },
+            fontFamily: {
+              serif: ['"Playfair Display"', 'serif'],
+              sans: ['Inter', 'sans-serif'],
+            },
+          },
+        },
+      };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="bg-crema text-carbon antialiased overflow-x-hidden">
+    <div id="preloader" class="fixed inset-0 z-50 flex items-center justify-center bg-carbon text-crema">
+      <div class="animate-fade-scale text-center">
+        <div class="mb-4 text-4xl font-serif">Terraza</div>
+        <div class="text-sm uppercase tracking-[0.3em] text-crema/80">Tapas Lounge</div>
+      </div>
+    </div>
+
+    <header class="fixed inset-x-0 top-0 z-40 transition duration-300" id="mainNav">
+      <nav class="container mx-auto flex items-center justify-between px-5 py-4 lg:px-8">
+        <a href="#hero" class="text-xl font-serif tracking-[0.24em] text-crema">Terraza</a>
+        <div class="hidden items-center gap-8 md:flex">
+          <a href="#nosotros" class="text-sm uppercase tracking-[0.22em] text-crema/80 transition hover:text-crema">Nosotros</a>
+          <a href="#destacados" class="text-sm uppercase tracking-[0.22em] text-crema/80 transition hover:text-crema">Menú</a>
+          <a href="#galeria" class="text-sm uppercase tracking-[0.22em] text-crema/80 transition hover:text-crema">Galería</a>
+          <a href="#contacto" class="text-sm uppercase tracking-[0.22em] text-crema/80 transition hover:text-crema">Reserva</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <a
+            href="tel:+529626955184"
+            class="hidden rounded-full border border-crema/50 bg-black/10 px-5 py-2 text-sm text-crema transition hover:border-crema hover:bg-crema hover:text-carbon md:inline-flex"
+            >Llamar</a
+          >
+          <button id="menuToggle" class="md:hidden rounded-full border border-crema/50 bg-black/10 p-3 text-crema transition hover:border-crema hover:bg-crema hover:text-carbon">
+            <span class="sr-only">Abrir menú</span>
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round" />
+            </svg>
+          </button>
+        </div>
+      </nav>
+      <div id="mobileMenu" class="fixed inset-x-0 top-0 z-30 hidden bg-carbon/95 px-6 py-24 text-center text-crema backdrop-blur-lg md:hidden">
+        <button id="menuClose" class="absolute right-5 top-5 text-crema">
+          <span class="sr-only">Cerrar menú</span>
+          <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 6l12 12M18 6L6 18" stroke-linecap="round" />
+          </svg>
+        </button>
+        <div class="space-y-6 text-left text-lg font-medium">
+          <a href="#hero" class="block">Inicio</a>
+          <a href="#nosotros" class="block">Nosotros</a>
+          <a href="#destacados" class="block">Menú</a>
+          <a href="#galeria" class="block">Galería</a>
+          <a href="#contacto" class="block">Contacto</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero" class="relative flex min-h-screen items-end overflow-hidden bg-cover bg-center pt-24" style="background-image: linear-gradient(rgba(18,18,18,0.55), rgba(18,18,18,0.55)), url('assets/images/hero.svg');">
+        <div class="absolute inset-0 bg-gradient-to-b from-black/25 via-transparent to-black/75"></div>
+        <div class="container mx-auto flex min-h-[calc(100vh-96px)] flex-col justify-end px-5 pb-20 text-center text-crema lg:px-8">
+          <div class="relative z-10 mx-auto max-w-3xl">
+            <p class="mb-4 text-sm uppercase tracking-[0.35em] text-crema/80 reveal">Restaurante español · terraza · desayunos</p>
+            <h1 class="mb-6 text-5xl font-serif uppercase tracking-[0.16em] leading-tight md:text-6xl lg:text-7xl reveal">Terraza: Tapas Lounge</h1>
+            <p class="mx-auto mb-10 max-w-2xl text-base leading-8 text-crema/90 reveal">
+              Un rincón premium en Tapachula con tapas españolas, vinos seleccionados, desayunos desde las 8 AM y un ambiente moderno para cualquier momento del día.
+            </p>
+            <div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
+              <a
+                href="https://wa.me/529626955184"
+                class="btn-primary inline-flex min-h-[44px] items-center justify-center rounded-full bg-terracota px-7 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-crema shadow-[0_18px_45px_-30px_rgba(181,69,27,0.9)] transition duration-300 hover:scale-[1.02] hover:bg-[#9a3d18] reveal"
+                >Reservar mesa</a
+              >
+              <a
+                href="tel:+529626955184"
+                class="inline-flex min-h-[44px] items-center justify-center rounded-full border border-crema/40 bg-black/10 px-7 py-3 text-sm font-medium uppercase tracking-[0.18em] text-crema transition duration-300 hover:border-crema hover:bg-crema hover:text-carbon reveal"
+                >Llamar ahora</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="nosotros" class="container mx-auto px-5 py-20 lg:px-8">
+        <div class="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+          <div class="overflow-hidden rounded-[32px] bg-black/5 shadow-lg shadow-black/5 reveal">
+            <div class="relative h-96 bg-cover bg-center" style="background-image: url('assets/images/about.svg');">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-black/30"></div>
+            </div>
+          </div>
+          <div class="space-y-6">
+            <p class="text-sm uppercase tracking-[0.35em] text-terracota">Sobre nosotros</p>
+            <h2 class="text-4xl font-serif leading-tight text-carbon">Cocina española con espíritu mediterráneo y alma tapachulteca.</h2>
+            <p class="max-w-2xl text-base leading-8 text-carbon/80">
+              Terraza: Tapas Lounge es un lugar diseñado para desayunos tempranos, comida con amigos y cenas con coctelería cuidadosamente seleccionada. Nuestra propuesta mezcla recetas tradicionales españolas con toques contemporáneos, siempre en un espacio moderno, con buena música y un servicio cálido.
+            </p>
+            <div class="grid gap-4 sm:grid-cols-2">
+              <div class="rounded-3xl bg-crema p-6 shadow-[0_20px_60px_-40px_rgba(0,0,0,0.25)]">
+                <p class="text-sm uppercase tracking-[0.25em] text-terracota">Terraza al aire libre</p>
+                <p class="mt-3 text-sm text-carbon/75">Espacio abierto ideal para tardes de vino y atardeceres.</p>
+              </div>
+              <div class="rounded-3xl bg-crema p-6 shadow-[0_20px_60px_-40px_rgba(0,0,0,0.25)]">
+                <p class="text-sm uppercase tracking-[0.25em] text-terracota">Desayunos desde las 8 AM</p>
+                <p class="mt-3 text-sm text-carbon/75">Un diferenciador que nos hace perfectos para el primer café del día.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="destacados" class="bg-[#FAF3EA] py-20">
+        <div class="container mx-auto px-5 lg:px-8">
+          <div class="mb-12 text-center">
+            <p class="text-sm uppercase tracking-[0.35em] text-terracota">Destacados del menú</p>
+            <h2 class="mt-4 text-4xl font-serif text-carbon">Favoritos de clientes recurrentes</h2>
+          </div>
+          <div class="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+            <article class="feature-card reveal group overflow-hidden rounded-[32px] bg-white shadow-xl transition hover:-translate-y-1 hover:shadow-2xl">
+              <div class="relative overflow-hidden">
+                <img src="assets/images/placeholder.svg" alt="Tortilla española" loading="lazy" class="h-64 w-full object-cover transition-transform duration-400 group-hover:scale-105" />
+                <!-- REEMPLAZAR: foto real de Tortilla española -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                <span class="absolute bottom-6 left-6 text-xl font-semibold text-crema">Tortilla española</span>
+              </div>
+              <div class="p-6">
+                <p class="text-sm text-carbon/70">Nuestro platillo insignia, favorito de quienes vuelven por su sabor auténtico.</p>
+              </div>
+            </article>
+            <article class="feature-card reveal group overflow-hidden rounded-[32px] bg-white shadow-xl transition hover:-translate-y-1 hover:shadow-2xl">
+              <div class="relative overflow-hidden">
+                <img src="assets/images/placeholder.svg" alt="Crostinis" loading="lazy" class="h-64 w-full object-cover transition-transform duration-400 group-hover:scale-105" />
+                <!-- REEMPLAZAR: foto real de Crostinis -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                <span class="absolute bottom-6 left-6 text-xl font-semibold text-crema">Crostinis</span>
+              </div>
+              <div class="p-6">
+                <p class="text-sm text-carbon/70">Tapas frías con base crujiente, perfectas para compartir antes de la comida.</p>
+              </div>
+            </article>
+            <article class="feature-card reveal group overflow-hidden rounded-[32px] bg-white shadow-xl transition hover:-translate-y-1 hover:shadow-2xl">
+              <div class="relative overflow-hidden">
+                <img src="assets/images/placeholder.svg" alt="Tabla de tapas" loading="lazy" class="h-64 w-full object-cover transition-transform duration-400 group-hover:scale-105" />
+                <!-- REEMPLAZAR: foto real de Tabla de tapas -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                <span class="absolute bottom-6 left-6 text-xl font-semibold text-crema">Tabla para compartir</span>
+              </div>
+              <div class="p-6">
+                <p class="text-sm text-carbon/70">Variedad ideal para parejas y grupo, con un balance de sabores mediterráneos.</p>
+              </div>
+            </article>
+            <article class="feature-card reveal group overflow-hidden rounded-[32px] bg-white shadow-xl transition hover:-translate-y-1 hover:shadow-2xl">
+              <div class="relative overflow-hidden">
+                <img src="assets/images/placeholder.svg" alt="Ensalada de autor" loading="lazy" class="h-64 w-full object-cover transition-transform duration-400 group-hover:scale-105" />
+                <!-- REEMPLAZAR: foto real de Ensaladas de autor -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                <span class="absolute bottom-6 left-6 text-xl font-semibold text-crema">Ensaladas de autor</span>
+              </div>
+              <div class="p-6">
+                <p class="text-sm text-carbon/70">Frescura y creatividad en cada propuesta para acompañar tu comida.</p>
+              </div>
+            </article>
+            <article class="feature-card reveal group overflow-hidden rounded-[32px] bg-white shadow-xl transition hover:-translate-y-1 hover:shadow-2xl">
+              <div class="relative overflow-hidden">
+                <img src="assets/images/placeholder.svg" alt="Terraza Burger" loading="lazy" class="h-64 w-full object-cover transition-transform duration-400 group-hover:scale-105" />
+                <!-- REEMPLAZAR: foto real de Terraza Burger -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                <span class="absolute bottom-6 left-6 text-xl font-semibold text-crema">Terraza Burger</span>
+              </div>
+              <div class="p-6">
+                <p class="text-sm text-carbon/70">Un favorito destacado por clientes, con sabor intenso y presentación cuidada.</p>
+              </div>
+            </article>
+            <article class="feature-card reveal group overflow-hidden rounded-[32px] bg-white shadow-xl transition hover:-translate-y-1 hover:shadow-2xl">
+              <div class="relative overflow-hidden">
+                <img src="assets/images/placeholder.svg" alt="Cócteles y vinos" loading="lazy" class="h-64 w-full object-cover transition-transform duration-400 group-hover:scale-105" />
+                <!-- REEMPLAZAR: foto real de Cócteles y vinos -->
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                <span class="absolute bottom-6 left-6 text-xl font-semibold text-crema">Cócteles y vinos</span>
+              </div>
+              <div class="p-6">
+                <p class="text-sm text-carbon/70">Amplia selección de vinos y tragos de autor para maridar cada momento.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="galeria" class="container mx-auto px-5 py-20 lg:px-8">
+        <div class="mb-12 text-center">
+          <p class="text-sm uppercase tracking-[0.35em] text-terracota">Galería</p>
+          <h2 class="mt-4 text-4xl font-serif text-carbon">Un vistazo al ambiente y a los platillos</h2>
+        </div>
+        <div class="masonry-grid">
+          <button class="gallery-item reveal overflow-hidden rounded-[32px] bg-black/5 transition-transform duration-300 hover:scale-[1.02]" data-src="assets/images/placeholder.svg" aria-label="Abrir galería">
+            <img src="assets/images/placeholder.svg" alt="Ambiente de la terraza" loading="lazy" class="h-full w-full object-cover" />
+            <!-- REEMPLAZAR: foto real de ambiente terraza -->
+          </button>
+          <button class="gallery-item reveal overflow-hidden rounded-[32px] bg-black/5 transition-transform duration-300 hover:scale-[1.02]" data-src="assets/images/placeholder.svg" aria-label="Abrir galería">
+            <img src="assets/images/placeholder.svg" alt="Platillo destacado" loading="lazy" class="h-full w-full object-cover" />
+            <!-- REEMPLAZAR: foto real de platillo destacado -->
+          </button>
+          <button class="gallery-item reveal overflow-hidden rounded-[32px] bg-black/5 transition-transform duration-300 hover:scale-[1.02]" data-src="assets/images/placeholder.svg" aria-label="Abrir galería">
+            <img src="assets/images/placeholder.svg" alt="Bar de vinos" loading="lazy" class="h-full w-full object-cover" />
+            <!-- REEMPLAZAR: foto real de bar de vinos -->
+          </button>
+          <button class="gallery-item reveal overflow-hidden rounded-[32px] bg-black/5 transition-transform duration-300 hover:scale-[1.02]" data-src="assets/images/placeholder.svg" aria-label="Abrir galería">
+            <img src="assets/images/placeholder.svg" alt="Desayuno en mesa" loading="lazy" class="h-full w-full object-cover" />
+            <!-- REEMPLAZAR: foto real de desayuno -->
+          </button>
+        </div>
+      </section>
+
+      <section id="por-que" class="bg-[#FAF3EA] py-20">
+        <div class="container mx-auto px-5 lg:px-8">
+          <div class="mb-12 text-center">
+            <p class="text-sm uppercase tracking-[0.35em] text-terracota">Por qué visitarnos</p>
+            <h2 class="mt-4 text-4xl font-serif text-carbon">Un destino que reúne estilo, sabor y conveniencia</h2>
+          </div>
+          <div class="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+            <article class="amenity-card reveal rounded-[32px] bg-white p-8 shadow-xl transition hover:-translate-y-1 hover:shadow-2xl">
+              <div class="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-3xl bg-terracota/10 text-terracota">
+                <svg viewBox="0 0 24 24" class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>
+              </div>
+              <h3 class="mb-2 text-xl font-semibold text-carbon">Terraza al aire libre</h3>
+              <p class="text-sm leading-7 text-carbon/70">Disfruta el clima de Tapachula con vistas abiertas y ambiente relajado.</p>
+            </article>
+            <article class="amenity-card reveal rounded-[32px] bg-white p-8 shadow-xl transition hover:-translate-y-1 hover:shadow-2xl">
+              <div class="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-3xl bg-terracota/10 text-terracota">
+                <svg viewBox="0 0 24 24" class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5v14"/></svg>
+              </div>
+              <h3 class="mb-2 text-xl font-semibold text-carbon">Opciones veganas y gluten-free</h3>
+              <p class="text-sm leading-7 text-carbon/70">Sabores auténticos adaptados para todos los gustos y necesidades.</p>
+            </article>
+            <article class="amenity-card reveal rounded-[32px] bg-white p-8 shadow-xl transition hover:-translate-y-1 hover:shadow-2xl">
+              <div class="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-3xl bg-terracota/10 text-terracota">
+                <svg viewBox="0 0 24 24" class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 18L18 6M6 6l12 12"/></svg>
+              </div>
+              <h3 class="mb-2 text-xl font-semibold text-carbon">Acceso para silla de ruedas</h3>
+              <p class="text-sm leading-7 text-carbon/70">Instalaciones pensadas para una visita cómoda y sin complicaciones.</p>
+            </article>
+            <article class="amenity-card reveal rounded-[32px] bg-white p-8 shadow-xl transition hover:-translate-y-1 hover:shadow-2xl">
+              <div class="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-3xl bg-terracota/10 text-terracota">
+                <svg viewBox="0 0 24 24" class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h18M5 8v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8M16 3h-4l-2 5h8l-2-5z"/></svg>
+              </div>
+              <h3 class="mb-2 text-xl font-semibold text-carbon">Entrega a domicilio y curbside pickup</h3>
+              <p class="text-sm leading-7 text-carbon/70">Comodidad para que disfrutes nuestras tapas en casa o recojas sin bajar del auto.</p>
+            </article>
+            <article class="amenity-card reveal rounded-[32px] bg-white p-8 shadow-xl transition hover:-translate-y-1 hover:shadow-2xl">
+              <div class="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-3xl bg-terracota/10 text-terracota">
+                <svg viewBox="0 0 24 24" class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5v14"/></svg>
+              </div>
+              <h3 class="mb-2 text-xl font-semibold text-carbon">Happy hour</h3>
+              <p class="text-sm leading-7 text-carbon/70">Bebidas especiales para acompañar tus tapas en el mejor momento del día.</p>
+            </article>
+            <article class="amenity-card reveal rounded-[32px] bg-white p-8 shadow-xl transition hover:-translate-y-1 hover:shadow-2xl">
+              <div class="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-3xl bg-terracota/10 text-terracota">
+                <svg viewBox="0 0 24 24" class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M8 6v12M16 6v12M4 18h16"/></svg>
+              </div>
+              <h3 class="mb-2 text-xl font-semibold text-carbon">Almuerzo de fin de semana</h3>
+              <p class="text-sm leading-7 text-carbon/70">Plan ideal para disfrutar tapas y cocteles en un ambiente tranquilo.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="testimonios" class="container mx-auto px-5 py-20 lg:px-8">
+        <div class="mb-12 text-center">
+          <p class="text-sm uppercase tracking-[0.35em] text-terracota">Testimonios</p>
+          <div class="mt-4 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <h2 class="text-4xl font-serif text-carbon">4.8★ sobre 648 reseñas en Google</h2>
+            <span class="rounded-full bg-terracota/10 px-4 py-2 text-sm font-semibold uppercase tracking-[0.15em] text-terracota">Rango $$</span>
+          </div>
+        </div>
+        <div class="grid gap-6 lg:grid-cols-3">
+          <article class="review-card reveal rounded-[32px] bg-black/5 p-8 shadow-xl transition hover:-translate-y-1 hover:shadow-2xl">
+            <p class="mb-4 text-lg leading-8 text-carbon">"Ambiente muy cool, ideal para desayuno y cena con tragos. El servicio siempre atento y el patio se siente especial."</p>
+            <p class="text-sm uppercase tracking-[0.25em] text-carbon/60">Cliente satisfecho</p>
+          </article>
+          <article class="review-card reveal rounded-[32px] bg-black/5 p-8 shadow-xl transition hover:-translate-y-1 hover:shadow-2xl">
+            <p class="mb-4 text-lg leading-8 text-carbon">"Me encanta que tienen opciones veganas sin perder la esencia mediterránea. La recomendación del chef fue una grata sorpresa."</p>
+            <p class="text-sm uppercase tracking-[0.25em] text-carbon/60">Reseña local</p>
+          </article>
+          <article class="review-card reveal rounded-[32px] bg-black/5 p-8 shadow-xl transition hover:-translate-y-1 hover:shadow-2xl">
+            <p class="mb-4 text-lg leading-8 text-carbon">"Terraza Burger espectacular y la música crea el mood perfecto. Muy recomendado para una noche relajada con amigos."</p>
+            <p class="text-sm uppercase tracking-[0.25em] text-carbon/60">Fan del lugar</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="horarios" class="bg-[#FAF3EA] py-20">
+        <div class="container mx-auto px-5 lg:px-8">
+          <div class="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+            <div class="space-y-6 reveal">
+              <p class="text-sm uppercase tracking-[0.35em] text-terracota">Horarios y ubicación</p>
+              <h2 class="text-4xl font-serif text-carbon">Encuéntranos en Tapachula</h2>
+              <div class="rounded-[32px] bg-white p-8 shadow-xl">
+                <h3 class="mb-4 text-xl font-semibold text-carbon">Horarios</h3>
+                <table class="w-full text-left text-sm text-carbon/75 sm:text-base">
+                  <tbody>
+                    <tr class="border-b border-black/10">
+                      <td class="py-3 font-semibold text-carbon">Lunes a Sábado</td>
+                      <td class="py-3">8:00 AM – 11:00 PM</td>
+                    </tr>
+                    <tr>
+                      <td class="py-3 font-semibold text-carbon">Domingo</td>
+                      <td class="py-3">8:00 AM – 10:00 PM</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="rounded-[32px] bg-white p-8 shadow-xl">
+                <h3 class="mb-4 text-xl font-semibold text-carbon">Dirección</h3>
+                <p class="text-sm leading-7 text-carbon/75">
+                  Carretera Puerto Madero Km 3.5, Plaza Paseo Hortensias, Local 1, Los Naranjos, Ecológico Las Hortencias, 30700 Tapachula de Córdova y Ordóñez, Chiapas, México
+                </p>
+                <p class="mt-4 text-sm font-semibold text-carbon">Teléfono: <a href="tel:+529626955184" class="text-terracota">+52 962 695 5184</a></p>
+                <p class="text-sm font-semibold text-carbon">Email: <a href="mailto:terrazatb@publisite.mx" class="text-terracota">terrazatb@publisite.mx</a></p>
+              </div>
+            </div>
+            <div class="h-[520px] overflow-hidden rounded-[32px] shadow-xl reveal">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3877.100095793804!2d-92.28686988466818!3d14.873711389703793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f7318118810a115%3A0x123456789abcdef0!2sTerraza%3A%20Tapas%20Lounge%20Tapachula!5e0!3m2!1ses-419!2smx!4v0000000000000"
+                class="h-full w-full border-0"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                aria-label="Mapa de Terraza: Tapas Lounge"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacto" class="container mx-auto px-5 py-20 lg:px-8">
+        <div class="rounded-[40px] bg-carbon/80 p-10 text-crema shadow-2xl shadow-black/20 sm:p-14">
+          <div class="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+            <div class="space-y-6">
+              <p class="text-sm uppercase tracking-[0.35em] text-terracota">Reservaciones</p>
+              <h2 class="text-4xl font-serif leading-tight">Haz tu reserva o pregunta con un mensaje directo.</h2>
+              <p class="max-w-2xl text-base leading-8 text-crema/80">
+                Desde desayunos hasta cenas con cócteles, estamos listos para recibirte con el mejor servicio y un ambiente cuidado en cada detalle.
+              </p>
+              <div class="flex flex-col gap-4 sm:flex-row">
+                <a href="https://wa.me/529626955184" class="btn-cta inline-flex min-h-[48px] items-center justify-center rounded-full bg-terracota px-8 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-crema transition duration-300 hover:scale-[1.02] hover:bg-[#9a3d18]">WhatsApp</a>
+                <a href="tel:+529626955184" class="inline-flex min-h-[48px] items-center justify-center rounded-full border border-crema/30 bg-white/10 px-8 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-crema transition duration-300 hover:border-crema hover:bg-crema hover:text-carbon">Llamar ahora</a>
+              </div>
+            </div>
+            <div class="space-y-3 rounded-[32px] bg-[#F6EFE7]/95 p-8 text-carbon shadow-xl">
+              <p class="text-sm uppercase tracking-[0.35em] text-terracota">Prueba social</p>
+              <p class="text-3xl font-semibold">4.8/5</p>
+              <p class="text-sm leading-7 text-carbon/70">648 reseñas en Google respaldan nuestra experiencia mediterránea con un toque local.</p>
+              <div class="grid gap-3 rounded-3xl bg-carbon/5 p-6">
+                <div class="flex items-center justify-between text-sm text-carbon/70">
+                  <span>Tipo:</span><span>Restaurante español / tapas / desayunos / bar de vinos</span>
+                </div>
+                <div class="flex items-center justify-between text-sm text-carbon/70">
+                  <span>Precio:</span><span>$$ (medio-alto)</span>
+                </div>
+                <div class="flex items-center justify-between text-sm text-carbon/70">
+                  <span>Ubicación:</span><span>Tapachula, Chiapas</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-black text-crema">
+      <div class="container mx-auto px-5 py-14 lg:px-8">
+        <div class="grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-start">
+          <div class="space-y-6">
+            <a href="#hero" class="text-2xl font-serif tracking-[0.24em]">Terraza</a>
+            <p class="max-w-xl text-sm leading-7 text-crema/70">
+              Restaurante español en Tapachula con terraza, desayunos desde las 8 AM, coctelería premium y una experiencia mediterránea moderna.
+            </p>
+            <div class="flex items-center gap-4">
+              <a href="https://www.instagram.com/terrazatapaslounge/" target="_blank" rel="noreferrer" class="transition hover:text-terracota">Instagram</a>
+              <a href="https://www.facebook.com/TerrazaTapasLounge/" target="_blank" rel="noreferrer" class="transition hover:text-terracota">Facebook</a>
+            </div>
+          </div>
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div>
+              <h3 class="mb-3 text-sm uppercase tracking-[0.28em] text-terracota">Contacto</h3>
+              <p class="text-sm leading-7 text-crema/80">+52 962 695 5184</p>
+              <p class="text-sm leading-7 text-crema/80">terrazatb@publisite.mx</p>
+            </div>
+            <div>
+              <h3 class="mb-3 text-sm uppercase tracking-[0.28em] text-terracota">Horario</h3>
+              <p class="text-sm leading-7 text-crema/80">Lunes a Sábado: 8:00 AM – 11:00 PM</p>
+              <p class="text-sm leading-7 text-crema/80">Domingo: 8:00 AM – 10:00 PM</p>
+            </div>
+          </div>
+        </div>
+        <div class="mt-10 border-t border-crema/10 pt-6 text-center text-xs text-crema/60">
+          © 2026 Terraza: Tapas Lounge. Todos los derechos reservados.
+        </div>
+      </div>
+    </footer>
+
+    <div id="lightbox" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 p-5">
+      <button id="lightboxClose" class="absolute right-5 top-5 rounded-full bg-crema/10 p-3 text-crema transition hover:bg-crema/20">
+        <span class="sr-only">Cerrar imagen</span>
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18" stroke-linecap="round"/></svg>
+      </button>
+      <img id="lightboxImage" src="" alt="Imagen ampliada" class="max-h-full max-w-full rounded-[32px] shadow-2xl" />
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="js/main.js"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Terraza: Tapas Lounge",
+        "image": "assets/images/hero.svg",
+        "@id": "",
+        "url": "https://terrazatapaslounge.example.com",
+        "telephone": "+529626955184",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Carretera Puerto Madero Km 3.5, Plaza Paseo Hortensias, Local 1, Los Naranjos, Ecológico Las Hortencias",
+          "addressLocality": "Tapachula de Córdova y Ordóñez",
+          "addressRegion": "Chiapas",
+          "postalCode": "30700",
+          "addressCountry": "MX"
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "opens": "08:00",
+            "closes": "23:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Sunday",
+            "opens": "08:00",
+            "closes": "22:00"
+          }
+        ],
+        "priceRange": "$$",
+        "servesCuisine": ["Española", "Tapas", "Mediterránea"],
+        "sameAs": [
+          "https://www.instagram.com/terrazatapaslounge/",
+          "https://www.facebook.com/TerrazaTapasLounge/"
+        ]
+      }
+    </script>
+  </body>
+</html>

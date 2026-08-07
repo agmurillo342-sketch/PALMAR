@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap');
+
+:root {
+  color-scheme: light;
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  font-kerning: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background-color: #F6EFE7;
+}
+
+#preloader {
+  pointer-events: none;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#preloader.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.animate-fade-scale {
+  animation: fadeInScale 0.9s ease forwards;
+}
+
+@keyframes fadeInScale {
+  from { opacity: 0; transform: translateY(8px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+#mainNav {
+  background: transparent;
+}
+
+#mainNav.solid {
+  background: rgba(18,18,18,0.88);
+  backdrop-filter: blur(16px);
+}
+
+.btn-primary,
+.btn-cta {
+  transition: transform 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn-primary:hover,
+.btn-cta:hover {
+  transform: scale(1.02);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.masonry-grid {
+  column-count: 1;
+  column-gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .masonry-grid {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 1280px) {
+  .masonry-grid {
+    column-count: 3;
+  }
+}
+
+.gallery-item {
+  display: inline-block;
+  width: 100%;
+}
+
+.gallery-item img {
+  min-height: 280px;
+  width: 100%;
+}
+
+.feature-card img,
+.review-card,
+.amenity-card,
+#horarios iframe {
+  will-change: transform;
+}
+
+@media (max-width: 639px) {
+  #hero {
+    min-height: 80vh;
+  }
+}
+
+@media (min-width: 1024px) {
+  #hero {
+    background-attachment: scroll;
+  }
+}
+
+.shadow-2xl {
+  box-shadow: 0 35px 90px -45px rgba(0,0,0,0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+a {
+  font: inherit;
+}
+
+iframe {
+  border: 0;
+}
