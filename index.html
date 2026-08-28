@@ -3,446 +3,552 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Terraza: Tapas Lounge | Restaurante Español en Tapachula, Chiapas</title>
-    <meta
-      name="description"
-      content="Terraza: Tapas Lounge en Tapachula ofrece tapas españolas, desayunos, bar de vinos y terraza al aire libre con un ambiente moderno y sofisticado. Reserva ya."
-    />
+    <title>PAL'MAR Seafood & Grill Garage | Mariscos a la leña en Puerto Vallarta</title>
+    <meta name="description" content="PAL'MAR Seafood & Grill Garage ofrece mariscos frescos a la leña, cocktails y una experiencia contemporánea en Puerto Vallarta." />
+    <meta property="og:title" content="PAL'MAR Seafood & Grill Garage | Mariscos a la leña en Puerto Vallarta" />
+    <meta property="og:description" content="La esencia del mar sobre fuego. Mariscos frescos, cócteles y buena vibra en Puerto Vallarta." />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Terraza: Tapas Lounge | Restaurante Español en Tapachula, Chiapas" />
-    <meta
-      property="og:description"
-      content="Tapas españolas, desayunos tempranos, terraza y cócteles en Tapachula. Terraza: Tapas Lounge, experiencia premium y cálida."
-    />
-    <meta property="og:image" content="assets/images/hero.jpg" />
-    <meta property="og:locale" content="es_MX" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=1200&q=80" />
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         theme: {
           extend: {
             colors: {
-              terracota: '#B5451B',
-              crema: '#F6EFE7',
-              carbon: '#121212',
-              dorado: '#C9A46C',
+              ember: '#d9702d',
+              emberSoft: '#f5b27a',
+              charcoal: '#121417',
+              charcoalSoft: '#1b1d20',
+              sand: '#f4efe7',
+              stone: '#d8d2ca',
+              smoke: '#bfad9b'
             },
             fontFamily: {
-              serif: ['"Playfair Display"', 'serif'],
-              sans: ['Inter', 'sans-serif'],
-            },
-          },
-        },
+              display: ['Cormorant Garamond', 'serif'],
+              sans: ['Inter', 'sans-serif']
+            }
+          }
+        }
       };
     </script>
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/styles.css" />
   </head>
-  <body class="wood-bg text-carbon antialiased overflow-x-hidden">
-    <div id="preloader" class="fixed inset-0 z-50 flex items-center justify-center bg-carbon text-crema">
-      <div class="animate-fade-scale text-center">
-        <div class="mb-4 text-4xl font-serif">Terraza</div>
-        <div class="text-sm uppercase tracking-[0.3em] text-crema/80">Tapas Lounge</div>
-      </div>
-    </div>
-
-    <header class="fixed inset-x-0 top-0 z-40 transition duration-300" id="mainNav">
+  <body class="bg-charcoal text-sand antialiased selection:bg-ember selection:text-white">
+    <header id="mainNav" class="fixed inset-x-0 top-0 z-50 transition-all duration-300">
       <nav class="container mx-auto flex items-center justify-between px-5 py-4 lg:px-8">
-        <a href="#hero" class="flex items-center gap-3 text-xl font-serif tracking-[0.24em] text-crema"> 
-          <img src="assets/images/logo.png" alt="Terraza logo" class="h-8 w-auto rounded-sm" />
+        <a href="#home" class="flex items-center gap-3 text-lg font-medium uppercase tracking-[0.3em] text-sand">
+          <span class="font-display text-3xl tracking-[0.12em] text-sand">PAL'MAR</span>
         </a>
+
         <div class="hidden items-center gap-8 md:flex">
-          <a href="#nosotros" class="text-sm uppercase tracking-[0.22em] text-crema/80 transition hover:text-crema">Nosotros</a>
-          <a href="#destacados" class="text-sm uppercase tracking-[0.22em] text-crema/80 transition hover:text-crema">Menú</a>
-          <a href="#galeria" class="text-sm uppercase tracking-[0.22em] text-crema/80 transition hover:text-crema">Galería</a>
-          <a href="#contacto" class="text-sm uppercase tracking-[0.22em] text-crema/80 transition hover:text-crema">Reserva</a>
+          <a href="#home" class="nav-link text-xs uppercase tracking-[0.25em] text-sand/80 hover:text-white" data-i18n="nav.home">Home</a>
+          <a href="#story" class="nav-link text-xs uppercase tracking-[0.25em] text-sand/80 hover:text-white" data-i18n="nav.story">Story</a>
+          <a href="#menu" class="nav-link text-xs uppercase tracking-[0.25em] text-sand/80 hover:text-white" data-i18n="nav.menu">Menu</a>
+          <a href="#gallery" class="nav-link text-xs uppercase tracking-[0.25em] text-sand/80 hover:text-white" data-i18n="nav.gallery">Gallery</a>
+          <a href="#visit" class="nav-link text-xs uppercase tracking-[0.25em] text-sand/80 hover:text-white" data-i18n="nav.visit">Visit</a>
         </div>
+
         <div class="flex items-center gap-3">
-          <a
-            href="tel:+529626955184"
-            class="hidden rounded-full border border-crema/50 bg-black/10 px-5 py-2 text-sm text-crema transition hover:border-crema hover:bg-crema hover:text-carbon md:inline-flex"
-            >Llamar</a
-          >
-          <button id="menuToggle" class="md:hidden rounded-full border border-crema/50 bg-black/10 p-3 text-crema transition hover:border-crema hover:bg-crema hover:text-carbon">
-            <span class="sr-only">Abrir menú</span>
+          <div class="lang-switcher" aria-label="Language selector">
+            <button type="button" class="lang-btn active" data-lang="es">ES</button>
+            <button type="button" class="lang-btn" data-lang="en">EN</button>
+          </div>
+          <a href="tel:+523226882097" class="hidden rounded-full border border-sand/40 px-5 py-2 text-xs uppercase tracking-[0.25em] text-sand transition hover:border-ember hover:text-ember md:inline-flex" data-i18n="header.call">Call</a>
+          <button id="menuToggle" class="rounded-full border border-sand/40 p-3 text-sand md:hidden" aria-label="Open menu">
             <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round" />
             </svg>
           </button>
         </div>
       </nav>
-      <div id="mobileMenu" class="fixed inset-x-0 top-0 z-30 hidden bg-carbon/95 px-6 py-24 text-center text-crema backdrop-blur-lg md:hidden">
-        <button id="menuClose" class="absolute right-5 top-5 text-crema">
-          <span class="sr-only">Cerrar menú</span>
-          <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M6 6l12 12M18 6L6 18" stroke-linecap="round" />
-          </svg>
-        </button>
-        <div class="space-y-6 text-left text-lg font-medium">
-          <a href="#hero" class="block">Inicio</a>
-          <a href="#nosotros" class="block">Nosotros</a>
-          <a href="#destacados" class="block">Menú</a>
-          <a href="#galeria" class="block">Galería</a>
-          <a href="#contacto" class="block">Contacto</a>
+
+      <div id="mobileMenu" class="hidden border-t border-sand/10 bg-charcoal/95 px-6 py-8 backdrop-blur-md md:hidden">
+        <div class="flex flex-col gap-5 text-left text-lg uppercase tracking-[0.2em] text-sand">
+          <a href="#home" data-i18n="nav.home">Home</a>
+          <a href="#story" data-i18n="nav.story">Story</a>
+          <a href="#menu" data-i18n="nav.menu">Menu</a>
+          <a href="#gallery" data-i18n="nav.gallery">Gallery</a>
+          <a href="#visit" data-i18n="nav.visit">Visit</a>
         </div>
       </div>
     </header>
 
-    <main>
-      <section id="hero" class="relative flex min-h-screen items-end overflow-hidden bg-cover bg-center pt-24" style="background-image: linear-gradient(rgba(18,18,18,0.55), rgba(18,18,18,0.55)), url('assets/images/hero.jpg');">
-        <div class="absolute inset-0 bg-gradient-to-b from-black/25 via-transparent to-black/75"></div>
-        <div class="container mx-auto flex min-h-[calc(100vh-96px)] flex-col justify-end px-5 pb-20 text-center text-crema lg:px-8">
-          <div class="relative z-10 mx-auto max-w-3xl">
-            <p class="mb-4 text-sm uppercase tracking-[0.35em] text-crema/80 reveal">Restaurante español · terraza · desayunos</p>
-            <h1 class="mb-6 text-5xl font-serif uppercase tracking-[0.16em] leading-tight md:text-6xl lg:text-7xl reveal">Terraza: Tapas Lounge</h1>
-            <p class="mx-auto mb-10 max-w-2xl text-base leading-8 text-crema/90 reveal">
-              Un rincón premium en Tapachula con tapas españolas, vinos seleccionados, desayunos desde las 8 AM y un ambiente moderno para cualquier momento del día.
+    <main id="home">
+      <section class="relative isolate min-h-screen overflow-hidden bg-cover bg-center" style="background-image: linear-gradient(90deg, rgba(12,12,12,0.42), rgba(18,18,18,0.24)), url('https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=1800&q=80'); background-position: center center; background-size: cover;">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#121417]" aria-hidden="true"></div>
+        <div class="container relative mx-auto flex min-h-screen items-end px-5 pb-16 pt-28 lg:px-8">
+          <div class="hero-copy max-w-3xl">
+            <p class="reveal text-xs uppercase tracking-[0.5em] text-sand/80" data-i18n="hero.eyebrow">WOOD-FIRED SEAFOOD · ZONA ROMÁNTICA</p>
+            <h1 class="hero-title reveal mt-6 font-display text-5xl leading-[0.9] text-white sm:text-6xl lg:text-[7rem]" data-i18n="hero.title">The taste of the sea<br />over wood fire</h1>
+            <p class="reveal mt-6 max-w-xl text-base leading-8 text-sand/80 lg:text-lg" data-i18n="hero.subtitle">
+              Contemporary Mexican seafood, cooked over a wood fire in the heart of Puerto Vallarta. Food, music and good vibes.
             </p>
-            <div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <a
-                href="https://wa.me/529626955184"
-                class="btn-primary inline-flex min-h-[44px] items-center justify-center rounded-full bg-terracota px-7 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-crema shadow-[0_18px_45px_-30px_rgba(181,69,27,0.9)] transition duration-300 hover:scale-[1.02] hover:bg-[#9a3d18] reveal"
-                >Reservar mesa</a
-              >
-              <a
-                href="tel:+529626955184"
-                class="inline-flex min-h-[44px] items-center justify-center rounded-full border border-crema/40 bg-black/10 px-7 py-3 text-sm font-medium uppercase tracking-[0.18em] text-crema transition duration-300 hover:border-crema hover:bg-crema hover:text-carbon reveal"
-                >Llamar ahora</a
-              >
+            <div class="reveal mt-8 flex flex-col gap-4 sm:flex-row">
+              <a href="#reserve" class="inline-flex min-h-[48px] items-center justify-center rounded-full bg-ember px-7 py-3 text-xs font-semibold uppercase tracking-[0.25em] text-white transition hover:scale-[1.02] hover:bg-[#ba581e]" data-i18n="hero.primary">Reserve a table</a>
+              <a href="#menu" class="inline-flex min-h-[48px] items-center justify-center rounded-full border border-sand/40 bg-white/5 px-7 py-3 text-xs font-semibold uppercase tracking-[0.25em] text-sand transition hover:border-white hover:bg-white hover:text-charcoal" data-i18n="hero.secondary">View menu</a>
+            </div>
+
+            <div class="reveal mt-12 flex flex-wrap gap-6 text-sm text-sand/80">
+              <span class="inline-flex items-center gap-2"><span class="text-ember">★</span><span data-i18n="hero.stat1">4.6 TripAdvisor rating</span></span>
+              <span class="inline-flex items-center gap-2"><span class="text-ember">✦</span><span data-i18n="hero.stat2">100% wood-fired cooking</span></span>
+              <span class="inline-flex items-center gap-2"><span class="text-ember">✦</span><span data-i18n="hero.stat3">Mon to Sun · 1 PM – 11 PM</span></span>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="nosotros" class="container mx-auto px-5 py-20 lg:px-8">
-        <div class="grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
-          <div class="overflow-hidden rounded-[32px] bg-black/5 shadow-lg shadow-black/5 reveal">
-            <div class="relative h-96 bg-cover bg-center" style="background-image: url('assets/images/about.svg');">
-              <div class="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-black/30"></div>
-            </div>
+      <section id="story" class="container mx-auto px-5 py-24 lg:px-8">
+        <div class="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+          <div class="reveal overflow-hidden rounded-[28px] border border-sand/10 bg-charcoalSoft shadow-[0_30px_60px_-30px_rgba(0,0,0,0.7)]">
+            <img src="https://images.unsplash.com/photo-1559339352-af7f2177a7d8?auto=format&fit=crop&w=1000&q=80" alt="Cocina de mariscos a la leña" class="h-[560px] w-full object-cover" loading="lazy" />
           </div>
-          <div class="space-y-6">
-            <p class="text-sm uppercase tracking-[0.35em] text-terracota">Sobre nosotros</p>
-            <h2 class="text-4xl font-serif leading-tight text-carbon">Cocina española con espíritu mediterráneo y alma tapachulteca.</h2>
-            <p class="max-w-2xl text-base leading-8 text-carbon/80">
-              Terraza: Tapas Lounge es un lugar diseñado para desayunos tempranos, comida con amigos y cenas con coctelería cuidadosamente seleccionada. Nuestra propuesta mezcla recetas tradicionales españolas con toques contemporáneos, siempre en un espacio moderno, con buena música y un servicio cálido.
+          <div class="reveal">
+            <p class="text-xs uppercase tracking-[0.4em] text-ember" data-i18n="story.label">Our story</p>
+            <h2 class="mt-4 font-display text-5xl leading-none text-sand sm:text-6xl" data-i18n="story.title">Fire, sea and good vibes</h2>
+            <p class="mt-6 max-w-xl text-base leading-8 text-sand/75" data-i18n="story.text1">
+              PAL'MAR was born from a simple idea: to celebrate the bay's fresh seafood with the honesty of a wood fire. Every dish is cooked over wood embers, letting the smoke speak for itself.
             </p>
-            <div class="grid gap-4 sm:grid-cols-2">
-              <div class="rounded-3xl bg-crema p-6 shadow-[0_20px_60px_-40px_rgba(0,0,0,0.25)]">
-                <p class="text-sm uppercase tracking-[0.25em] text-terracota">Terraza al aire libre</p>
-                <p class="mt-3 text-sm text-carbon/75">Espacio abierto ideal para tardes de vino y atardeceres.</p>
+            <p class="mt-4 max-w-xl text-base leading-8 text-sand/75" data-i18n="story.text2">
+              We are a small restaurant with contemporary design, made for sharing. Our dishes are meant for the center of the table, paired with fresh cocktails and good music.
+            </p>
+            <div class="mt-8 grid gap-4 sm:grid-cols-2">
+              <div class="rounded-[24px] border border-sand/10 bg-charcoalSoft p-5">
+                <p class="text-xs uppercase tracking-[0.25em] text-ember" data-i18n="story.card1.title">Wood fire</p>
+                <p class="mt-3 text-sm leading-7 text-sand/70" data-i18n="story.card1.text">Everything passes over our wood embers for an unmistakable smoky flavor.</p>
               </div>
-              <div class="rounded-3xl bg-crema p-6 shadow-[0_20px_60px_-40px_rgba(0,0,0,0.25)]">
-                <p class="text-sm uppercase tracking-[0.25em] text-terracota">Desayunos desde las 8 AM</p>
-                <p class="mt-3 text-sm text-carbon/75">Un diferenciador que nos hace perfectos para el primer café del día.</p>
+              <div class="rounded-[24px] border border-sand/10 bg-charcoalSoft p-5">
+                <p class="text-xs uppercase tracking-[0.25em] text-ember" data-i18n="story.card2.title">Fresh seafood</p>
+                <p class="mt-3 text-sm leading-7 text-sand/70" data-i18n="story.card2.text">Local bay product, selected fresh every morning.</p>
+              </div>
+              <div class="rounded-[24px] border border-sand/10 bg-charcoalSoft p-5">
+                <p class="text-xs uppercase tracking-[0.25em] text-ember" data-i18n="story.card3.title">Made to share</p>
+                <p class="mt-3 text-sm leading-7 text-sand/70" data-i18n="story.card3.text">Generous plates designed for the center of the table.</p>
+              </div>
+              <div class="rounded-[24px] border border-sand/10 bg-charcoalSoft p-5">
+                <p class="text-xs uppercase tracking-[0.25em] text-ember" data-i18n="story.card4.title">Cocktails</p>
+                <p class="mt-3 text-sm leading-7 text-sand/70" data-i18n="story.card4.text">Fresh, creative drinks that pair with every bite.</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="destacados" class="bg-[#FAF3EA] py-20">
+      <section id="menu" class="bg-[#171b1f] py-24">
         <div class="container mx-auto px-5 lg:px-8">
-          <div class="mb-12 text-center">
-            <p class="text-sm uppercase tracking-[0.35em] text-terracota">Destacados del menú</p>
-            <h2 class="mt-4 text-4xl font-serif text-carbon">Favoritos de clientes recurrentes</h2>
+          <div class="reveal text-center">
+            <p class="text-xs uppercase tracking-[0.44em] text-ember" data-i18n="menu.label">Our menu</p>
+            <h2 class="mt-4 font-display text-5xl text-sand sm:text-6xl" data-i18n="menu.title">From the sea to your table</h2>
+            <p class="mx-auto mt-5 max-w-3xl text-base leading-8 text-white">
+              Fresh seafood, slow fire, vibrant spices and generous platters made for sharing. The menu is designed for long dinners, good conversation and the kind of flavors that stay with you.
+            </p>
           </div>
-          <div class="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
-            <article class="feature-card reveal group overflow-hidden rounded-[32px] bg-white shadow-xl transition hover:-translate-y-1 hover:shadow-2xl">
-              <div class="relative overflow-hidden">
-                <img src="assets/images/placeholder.svg" alt="Tortilla española" loading="lazy" class="h-64 w-full object-cover transition-transform duration-400 group-hover:scale-105" />
-                <!-- REEMPLAZAR: foto real de Tortilla española -->
-                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-                <span class="absolute bottom-6 left-6 text-xl font-semibold text-crema">Tortilla española</span>
-              </div>
-              <div class="p-6">
-                <p class="text-sm text-carbon/70">Nuestro platillo insignia, favorito de quienes vuelven por su sabor auténtico.</p>
-              </div>
-            </article>
-            <article class="feature-card reveal group overflow-hidden rounded-[32px] bg-white shadow-xl transition hover:-translate-y-1 hover:shadow-2xl">
-              <div class="relative overflow-hidden">
-                <img src="assets/images/placeholder.svg" alt="Crostinis" loading="lazy" class="h-64 w-full object-cover transition-transform duration-400 group-hover:scale-105" />
-                <!-- REEMPLAZAR: foto real de Crostinis -->
-                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-                <span class="absolute bottom-6 left-6 text-xl font-semibold text-crema">Crostinis</span>
-              </div>
-              <div class="p-6">
-                <p class="text-sm text-carbon/70">Tapas frías con base crujiente, perfectas para compartir antes de la comida.</p>
-              </div>
-            </article>
-            <article class="feature-card reveal group overflow-hidden rounded-[32px] bg-white shadow-xl transition hover:-translate-y-1 hover:shadow-2xl">
-              <div class="relative overflow-hidden">
-                <img src="assets/images/placeholder.svg" alt="Tabla de tapas" loading="lazy" class="h-64 w-full object-cover transition-transform duration-400 group-hover:scale-105" />
-                <!-- REEMPLAZAR: foto real de Tabla de tapas -->
-                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-                <span class="absolute bottom-6 left-6 text-xl font-semibold text-crema">Tabla para compartir</span>
-              </div>
-              <div class="p-6">
-                <p class="text-sm text-carbon/70">Variedad ideal para parejas y grupo, con un balance de sabores mediterráneos.</p>
-              </div>
-            </article>
-            <article class="feature-card reveal group overflow-hidden rounded-[32px] bg-white shadow-xl transition hover:-translate-y-1 hover:shadow-2xl">
-              <div class="relative overflow-hidden">
-                <img src="assets/images/placeholder.svg" alt="Ensalada de autor" loading="lazy" class="h-64 w-full object-cover transition-transform duration-400 group-hover:scale-105" />
-                <!-- REEMPLAZAR: foto real de Ensaladas de autor -->
-                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-                <span class="absolute bottom-6 left-6 text-xl font-semibold text-crema">Ensaladas de autor</span>
-              </div>
-              <div class="p-6">
-                <p class="text-sm text-carbon/70">Frescura y creatividad en cada propuesta para acompañar tu comida.</p>
-              </div>
-            </article>
-            <article class="feature-card reveal group overflow-hidden rounded-[32px] bg-white shadow-xl transition hover:-translate-y-1 hover:shadow-2xl">
-              <div class="relative overflow-hidden">
-                <img src="assets/images/placeholder.svg" alt="Terraza Burger" loading="lazy" class="h-64 w-full object-cover transition-transform duration-400 group-hover:scale-105" />
-                <!-- REEMPLAZAR: foto real de Terraza Burger -->
-                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-                <span class="absolute bottom-6 left-6 text-xl font-semibold text-crema">Terraza Burger</span>
-              </div>
-              <div class="p-6">
-                <p class="text-sm text-carbon/70">Un favorito destacado por clientes, con sabor intenso y presentación cuidada.</p>
-              </div>
-            </article>
-            <article class="feature-card reveal group overflow-hidden rounded-[32px] bg-white shadow-xl transition hover:-translate-y-1 hover:shadow-2xl">
-              <div class="relative overflow-hidden">
-                <img src="assets/images/placeholder.svg" alt="Cócteles y vinos" loading="lazy" class="h-64 w-full object-cover transition-transform duration-400 group-hover:scale-105" />
-                <!-- REEMPLAZAR: foto real de Cócteles y vinos -->
-                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-                <span class="absolute bottom-6 left-6 text-xl font-semibold text-crema">Cócteles y vinos</span>
-              </div>
-              <div class="p-6">
-                <p class="text-sm text-carbon/70">Amplia selección de vinos y tragos de autor para maridar cada momento.</p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
 
-      <section id="galeria" class="container mx-auto px-5 py-20 lg:px-8">
-        <div class="mb-12 text-center">
-          <p class="text-sm uppercase tracking-[0.35em] text-terracota">Galería</p>
-          <h2 class="mt-4 text-4xl font-serif text-carbon">Un vistazo al ambiente y a los platillos</h2>
-        </div>
-        <div class="masonry-grid">
-          <button class="gallery-item reveal overflow-hidden rounded-[32px] bg-black/5 transition-transform duration-300 hover:scale-[1.02]" data-src="assets/images/placeholder.svg" aria-label="Abrir galería">
-            <img src="assets/images/placeholder.svg" alt="Ambiente de la terraza" loading="lazy" class="h-full w-full object-cover" />
-            <!-- REEMPLAZAR: foto real de ambiente terraza -->
-          </button>
-          <button class="gallery-item reveal overflow-hidden rounded-[32px] bg-black/5 transition-transform duration-300 hover:scale-[1.02]" data-src="assets/images/placeholder.svg" aria-label="Abrir galería">
-            <img src="assets/images/placeholder.svg" alt="Platillo destacado" loading="lazy" class="h-full w-full object-cover" />
-            <!-- REEMPLAZAR: foto real de platillo destacado -->
-          </button>
-          <button class="gallery-item reveal overflow-hidden rounded-[32px] bg-black/5 transition-transform duration-300 hover:scale-[1.02]" data-src="assets/images/placeholder.svg" aria-label="Abrir galería">
-            <img src="assets/images/placeholder.svg" alt="Bar de vinos" loading="lazy" class="h-full w-full object-cover" />
-            <!-- REEMPLAZAR: foto real de bar de vinos -->
-          </button>
-          <button class="gallery-item reveal overflow-hidden rounded-[32px] bg-black/5 transition-transform duration-300 hover:scale-[1.02]" data-src="assets/images/placeholder.svg" aria-label="Abrir galería">
-            <img src="assets/images/placeholder.svg" alt="Desayuno en mesa" loading="lazy" class="h-full w-full object-cover" />
-            <!-- REEMPLAZAR: foto real de desayuno -->
-          </button>
-        </div>
-      </section>
+          <div class="mt-12 grid gap-6 lg:grid-cols-3">
+            <article class="reveal group overflow-hidden rounded-[28px] border border-sand/10 bg-charcoalSoft text-white">
+              <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=80" alt="Kikiriki Salad" class="h-72 w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" />
+              <div class="p-6">
+                <div class="flex items-center justify-between gap-4">
+                  <h3 class="font-display text-4xl text-white">Kikiriki Salad</h3>
+                  <span class="text-sm font-medium text-ember">$245</span>
+                </div>
+                <p class="mt-4 text-sm leading-7 text-white/80" data-i18n="menu.item1">Crunchy chicken salad with avocado and house creamy dressing.</p>
+              </div>
+            </article>
 
-      <section id="por-que" class="bg-[#FAF3EA] py-20">
-        <div class="container mx-auto px-5 lg:px-8">
-          <div class="mb-12 text-center">
-            <p class="text-sm uppercase tracking-[0.35em] text-terracota">Por qué visitarnos</p>
-            <h2 class="mt-4 text-4xl font-serif text-carbon">Un destino que reúne estilo, sabor y conveniencia</h2>
-          </div>
-          <div class="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
-            <article class="amenity-card reveal rounded-[32px] bg-white p-8 shadow-xl transition hover:-translate-y-1 hover:shadow-2xl">
-              <div class="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-3xl bg-terracota/10 text-terracota">
-                <svg viewBox="0 0 24 24" class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>
+            <article class="reveal group overflow-hidden rounded-[28px] border border-sand/10 bg-charcoalSoft text-white">
+              <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=80" alt="Wood-fired Bone Marrow" class="h-72 w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" />
+              <div class="p-6">
+                <div class="flex items-center justify-between gap-4">
+                  <h3 class="font-display text-4xl text-white">Wood-fired Bone Marrow</h3>
+                  <span class="text-sm font-medium text-ember">$285</span>
+                </div>
+                <p class="mt-4 text-sm leading-7 text-white/80" data-i18n="menu.item2">Ember-roasted bone marrow with tortillas and morita chile salsa.</p>
               </div>
-              <h3 class="mb-2 text-xl font-semibold text-carbon">Terraza al aire libre</h3>
-              <p class="text-sm leading-7 text-carbon/70">Disfruta el clima de Tapachula con vistas abiertas y ambiente relajado.</p>
             </article>
-            <article class="amenity-card reveal rounded-[32px] bg-white p-8 shadow-xl transition hover:-translate-y-1 hover:shadow-2xl">
-              <div class="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-3xl bg-terracota/10 text-terracota">
-                <svg viewBox="0 0 24 24" class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5v14"/></svg>
+
+            <article class="reveal group overflow-hidden rounded-[28px] border border-sand/10 bg-charcoalSoft text-white">
+              <img src="https://images.unsplash.com/photo-1559339352-af7f2177a7d8?auto=format&fit=crop&w=900&q=80" alt="Fresh Oysters" class="h-72 w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" />
+              <div class="p-6">
+                <div class="flex items-center justify-between gap-4">
+                  <h3 class="font-display text-4xl text-white">Fresh Oysters</h3>
+                  <span class="text-sm font-medium text-ember">$320</span>
+                </div>
+                <p class="mt-4 text-sm leading-7 text-white/80" data-i18n="menu.item3">Half dozen oysters with lime and house salsa.</p>
               </div>
-              <h3 class="mb-2 text-xl font-semibold text-carbon">Opciones veganas y gluten-free</h3>
-              <p class="text-sm leading-7 text-carbon/70">Sabores auténticos adaptados para todos los gustos y necesidades.</p>
             </article>
-            <article class="amenity-card reveal rounded-[32px] bg-white p-8 shadow-xl transition hover:-translate-y-1 hover:shadow-2xl">
-              <div class="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-3xl bg-terracota/10 text-terracota">
-                <svg viewBox="0 0 24 24" class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 18L18 6M6 6l12 12"/></svg>
+
+            <article class="reveal group overflow-hidden rounded-[28px] border border-sand/10 bg-charcoalSoft text-white">
+              <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80" alt="Ceviche" class="h-72 w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" />
+              <div class="p-6">
+                <div class="flex items-center justify-between gap-4">
+                  <h3 class="font-display text-4xl text-white">Ceviche de Mariscos</h3>
+                  <span class="text-sm font-medium text-ember">$260</span>
+                </div>
+                <p class="mt-4 text-sm leading-7 text-white/80">Fresh citrus-cured seafood, cucumber, chili and bright coastal flavors.</p>
               </div>
-              <h3 class="mb-2 text-xl font-semibold text-carbon">Acceso para silla de ruedas</h3>
-              <p class="text-sm leading-7 text-carbon/70">Instalaciones pensadas para una visita cómoda y sin complicaciones.</p>
             </article>
-            <article class="amenity-card reveal rounded-[32px] bg-white p-8 shadow-xl transition hover:-translate-y-1 hover:shadow-2xl">
-              <div class="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-3xl bg-terracota/10 text-terracota">
-                <svg viewBox="0 0 24 24" class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h18M5 8v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8M16 3h-4l-2 5h8l-2-5z"/></svg>
+
+            <article class="reveal group overflow-hidden rounded-[28px] border border-sand/10 bg-charcoalSoft text-white">
+              <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=900&q=80" alt="Seafood grill" class="h-72 w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" />
+              <div class="p-6">
+                <div class="flex items-center justify-between gap-4">
+                  <h3 class="font-display text-4xl text-white">Wood-fired Platter</h3>
+                  <span class="text-sm font-medium text-ember">$620</span>
+                </div>
+                <p class="mt-4 text-sm leading-7 text-white/80">A generous grill selection of shrimp, octopus, fish and seasonal catches over ember.</p>
               </div>
-              <h3 class="mb-2 text-xl font-semibold text-carbon">Entrega a domicilio y curbside pickup</h3>
-              <p class="text-sm leading-7 text-carbon/70">Comodidad para que disfrutes nuestras tapas en casa o recojas sin bajar del auto.</p>
             </article>
-            <article class="amenity-card reveal rounded-[32px] bg-white p-8 shadow-xl transition hover:-translate-y-1 hover:shadow-2xl">
-              <div class="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-3xl bg-terracota/10 text-terracota">
-                <svg viewBox="0 0 24 24" class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5v14"/></svg>
+
+            <article class="reveal group overflow-hidden rounded-[28px] border border-sand/10 bg-charcoalSoft text-white">
+              <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=80" alt="Seafood paella" class="h-72 w-full object-cover transition duration-500 group-hover:scale-105" loading="lazy" />
+              <div class="p-6">
+                <div class="flex items-center justify-between gap-4">
+                  <h3 class="font-display text-4xl text-white">Seafood Paella</h3>
+                  <span class="text-sm font-medium text-ember">$480</span>
+                </div>
+                <p class="mt-4 text-sm leading-7 text-white/80">Saffron rice, shellfish, grilled vegetables and the smoky depth of the fire.</p>
               </div>
-              <h3 class="mb-2 text-xl font-semibold text-carbon">Happy hour</h3>
-              <p class="text-sm leading-7 text-carbon/70">Bebidas especiales para acompañar tus tapas en el mejor momento del día.</p>
-            </article>
-            <article class="amenity-card reveal rounded-[32px] bg-white p-8 shadow-xl transition hover:-translate-y-1 hover:shadow-2xl">
-              <div class="mb-4 inline-flex h-14 w-14 items-center justify-center rounded-3xl bg-terracota/10 text-terracota">
-                <svg viewBox="0 0 24 24" class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M8 6v12M16 6v12M4 18h16"/></svg>
-              </div>
-              <h3 class="mb-2 text-xl font-semibold text-carbon">Almuerzo de fin de semana</h3>
-              <p class="text-sm leading-7 text-carbon/70">Plan ideal para disfrutar tapas y cocteles en un ambiente tranquilo.</p>
             </article>
           </div>
-        </div>
-      </section>
 
-      <section id="testimonios" class="container mx-auto px-5 py-20 lg:px-8">
-        <div class="mb-12 text-center">
-          <p class="text-sm uppercase tracking-[0.35em] text-terracota">Testimonios</p>
-          <div class="mt-4 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <h2 class="text-4xl font-serif text-carbon">4.8★ sobre 648 reseñas en Google</h2>
-            <span class="rounded-full bg-terracota/10 px-4 py-2 text-sm font-semibold uppercase tracking-[0.15em] text-terracota">Rango $$</span>
+          <div class="mt-12 grid gap-6 rounded-[32px] border border-sand/10 bg-charcoalSoft p-8 md:grid-cols-3">
+            <div class="reveal">
+              <p class="text-[10px] uppercase tracking-[0.35em] text-ember">Starters</p>
+              <ul class="mt-4 space-y-3 text-sm leading-7 text-white/80">
+                <li>• Ceviche de mariscos</li>
+                <li>• Kikiriki salad</li>
+                <li>• Crispy calamari</li>
+                <li>• Grilled octopus bites</li>
+              </ul>
+            </div>
+            <div class="reveal">
+              <p class="text-[10px] uppercase tracking-[0.35em] text-ember">Fire grill</p>
+              <ul class="mt-4 space-y-3 text-sm leading-7 text-white/80">
+                <li>• Wood-fired shrimp</li>
+                <li>• Fresh oysters</li>
+                <li>• Bone marrow & salsa</li>
+                <li>• Catch of the day grill</li>
+              </ul>
+            </div>
+            <div class="reveal">
+              <p class="text-[10px] uppercase tracking-[0.35em] text-ember">Drinks</p>
+              <ul class="mt-4 space-y-3 text-sm leading-7 text-white/80">
+                <li>• Signature cocktails</li>
+                <li>• Local beer & wine</li>
+                <li>• Fresh citrus spritzes</li>
+                <li>• Mezcal and tequila pours</li>
+              </ul>
+            </div>
           </div>
-        </div>
-        <div class="grid gap-6 lg:grid-cols-3">
-          <article class="review-card reveal rounded-[32px] bg-black/5 p-8 shadow-xl transition hover:-translate-y-1 hover:shadow-2xl">
-            <p class="mb-4 text-lg leading-8 text-carbon">"Ambiente muy cool, ideal para desayuno y cena con tragos. El servicio siempre atento y el patio se siente especial."</p>
-            <p class="text-sm uppercase tracking-[0.25em] text-carbon/60">Cliente satisfecho</p>
-          </article>
-          <article class="review-card reveal rounded-[32px] bg-black/5 p-8 shadow-xl transition hover:-translate-y-1 hover:shadow-2xl">
-            <p class="mb-4 text-lg leading-8 text-carbon">"Me encanta que tienen opciones veganas sin perder la esencia mediterránea. La recomendación del chef fue una grata sorpresa."</p>
-            <p class="text-sm uppercase tracking-[0.25em] text-carbon/60">Reseña local</p>
-          </article>
-          <article class="review-card reveal rounded-[32px] bg-black/5 p-8 shadow-xl transition hover:-translate-y-1 hover:shadow-2xl">
-            <p class="mb-4 text-lg leading-8 text-carbon">"Terraza Burger espectacular y la música crea el mood perfecto. Muy recomendado para una noche relajada con amigos."</p>
-            <p class="text-sm uppercase tracking-[0.25em] text-carbon/60">Fan del lugar</p>
-          </article>
-        </div>
-      </section>
 
-      <section id="horarios" class="bg-[#FAF3EA] py-20">
-        <div class="container mx-auto px-5 lg:px-8">
-          <div class="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
-            <div class="space-y-6 reveal">
-              <p class="text-sm uppercase tracking-[0.35em] text-terracota">Horarios y ubicación</p>
-              <h2 class="text-4xl font-serif text-carbon">Encuéntranos en Tapachula</h2>
-              <div class="rounded-[32px] bg-white p-8 shadow-xl">
-                <h3 class="mb-4 text-xl font-semibold text-carbon">Horarios</h3>
-                <table class="w-full text-left text-sm text-carbon/75 sm:text-base">
-                  <tbody>
-                    <tr class="border-b border-black/10">
-                      <td class="py-3 font-semibold text-carbon">Lunes a Sábado</td>
-                      <td class="py-3">8:00 AM – 11:00 PM</td>
-                    </tr>
-                    <tr>
-                      <td class="py-3 font-semibold text-carbon">Domingo</td>
-                      <td class="py-3">8:00 AM – 10:00 PM</td>
-                    </tr>
-                  </tbody>
-                </table>
+          <div class="mt-12 rounded-[32px] border border-sand/10 bg-charcoalSoft p-8 md:p-10">
+            <div class="reveal">
+              <p class="text-[10px] uppercase tracking-[0.35em] text-ember">Chef’s favorites</p>
+              <h3 class="mt-4 font-display text-4xl text-white">Seafood worth sharing</h3>
+            </div>
+            <div class="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+              <div class="reveal rounded-[24px] border border-sand/10 bg-[#1a1d20] p-5">
+                <div class="flex items-center justify-between gap-3">
+                  <h4 class="font-display text-3xl text-white">Ceviche clásico</h4>
+                  <span class="text-sm font-medium text-ember">$260</span>
+                </div>
+                <p class="mt-3 text-sm leading-7 text-white/80">Citrus-cured shrimp and fish with cucumber, cilantro, chili and sea salt.</p>
               </div>
-              <div class="rounded-[32px] bg-white p-8 shadow-xl">
-                <h3 class="mb-4 text-xl font-semibold text-carbon">Dirección</h3>
-                <p class="text-sm leading-7 text-carbon/75">
-                  Carretera Puerto Madero Km 3.5, Plaza Paseo Hortensias, Local 1, Los Naranjos, Ecológico Las Hortencias, 30700 Tapachula de Córdova y Ordóñez, Chiapas, México
+              <div class="reveal rounded-[24px] border border-sand/10 bg-[#1a1d20] p-5">
+                <div class="flex items-center justify-between gap-3">
+                  <h4 class="font-display text-3xl text-white">Pescado a la plancha</h4>
+                  <span class="text-sm font-medium text-ember">$310</span>
+                </div>
+                <p class="mt-3 text-sm leading-7 text-white/80">Fresh catch from the coast, grilled with herbs, citrus and smoky char.</p>
+              </div>
+              <div class="reveal rounded-[24px] border border-sand/10 bg-[#1a1d20] p-5">
+                <div class="flex items-center justify-between gap-3">
+                  <h4 class="font-display text-3xl text-white">Shrimp grill</h4>
+                  <span class="text-sm font-medium text-ember">$340</span>
+                </div>
+                <p class="mt-3 text-sm leading-7 text-white/80">Wood-fired prawns tossed with garlic butter, herbs and a bright chile finish.</p>
+              </div>
+              <div class="reveal rounded-[24px] border border-sand/10 bg-[#1a1d20] p-5">
+                <div class="flex items-center justify-between gap-3">
+                  <h4 class="font-display text-3xl text-white">Octopus tostadas</h4>
+                  <span class="text-sm font-medium text-ember">$230</span>
+                </div>
+                <p class="mt-3 text-sm leading-7 text-white/80">Tender grilled octopus over crisp tostadas with lime and smoky salsa.</p>
+              </div>
+              <div class="reveal rounded-[24px] border border-sand/10 bg-[#1a1d20] p-5">
+                <div class="flex items-center justify-between gap-3">
+                  <h4 class="font-display text-3xl text-white">Tacos del mar</h4>
+                  <span class="text-sm font-medium text-ember">$240</span>
+                </div>
+                <p class="mt-3 text-sm leading-7 text-white/80">Three tacos with grilled fish, slaw, citrus crema and roasted chile.</p>
+              </div>
+              <div class="reveal rounded-[24px] border border-sand/10 bg-[#1a1d20] p-5">
+                <div class="flex items-center justify-between gap-3">
+                  <h4 class="font-display text-3xl text-white">Margarita PAL'MAR</h4>
+                  <span class="text-sm font-medium text-ember">$180</span>
+                </div>
+                <p class="mt-3 text-sm leading-7 text-white/80">A bright citrus cocktail with premium tequila, lime and a touch of sea salt.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-12 rounded-[32px] border border-sand/10 bg-charcoalSoft p-8 text-left md:p-10">
+            <div class="grid gap-8 md:grid-cols-2">
+              <div class="reveal">
+                <p class="text-[10px] uppercase tracking-[0.35em] text-ember">Our style</p>
+                <h3 class="mt-4 font-display text-4xl text-white">Seafood done with fire and character</h3>
+                <p class="mt-4 text-base leading-8 text-white/80">
+                  At PAL'MAR, every dish is built around the flavor of the coast: fresh fish, shellfish and seasonal ingredients prepared over open flame for a deep, smoky finish that feels generous and unmistakably coastal.
                 </p>
-                <p class="mt-4 text-sm font-semibold text-carbon">Teléfono: <a href="tel:+529626955184" class="text-terracota">+52 962 695 5184</a></p>
-                <p class="text-sm font-semibold text-carbon">Email: <a href="mailto:terrazatb@publisite.mx" class="text-terracota">terrazatb@publisite.mx</a></p>
+              </div>
+              <div class="reveal">
+                <p class="text-[10px] uppercase tracking-[0.35em] text-ember">Who it suits</p>
+                <h3 class="mt-4 font-display text-4xl text-white">Perfect for gatherings</h3>
+                <p class="mt-4 text-base leading-8 text-white/80">
+                  Ideal for dates, sunset drinks, group dinners and special celebrations by the sea. The experience is lively, welcoming and designed to linger, share and enjoy every bite.
+                </p>
               </div>
             </div>
-            <div class="h-[520px] overflow-hidden rounded-[32px] shadow-xl reveal">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3877.100095793804!2d-92.28686988466818!3d14.873711389703793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f7318118810a115%3A0x123456789abcdef0!2sTerraza%3A%20Tapas%20Lounge%20Tapachula!5e0!3m2!1ses-419!2smx!4v0000000000000"
-                class="h-full w-full border-0"
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-                aria-label="Mapa de Terraza: Tapas Lounge"
-              ></iframe>
+          </div>
+
+          <div class="mt-10 flex justify-center">
+            <a href="#reserve" class="inline-flex min-h-[48px] items-center justify-center rounded-full border border-sand/40 px-7 py-3 text-xs uppercase tracking-[0.25em] text-white transition hover:border-ember hover:text-ember" data-i18n="menu.cta">View full menu</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="container mx-auto px-5 py-24 lg:px-8">
+        <div class="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+          <div class="reveal">
+            <p class="text-xs uppercase tracking-[0.44em] text-ember">At PAL'MAR</p>
+            <h2 class="mt-4 font-display text-5xl text-sand sm:text-6xl">Seafood, music and slow evenings</h2>
+            <p class="mt-6 max-w-2xl text-base leading-8 text-sand/75">
+              PAL'MAR is built around the rhythm of the coast: fresh catches, open-fire cooking, and a relaxed atmosphere that turns dinner into a shared experience. From the first cocktail to the last bite, every detail is designed to feel generous, warm and memorable.
+            </p>
+            <p class="mt-4 max-w-2xl text-base leading-8 text-sand/75">
+              We serve a menu inspired by the sea and the region, with dishes meant for gathering, conversation and lingering a little longer than planned. Whether you come for a sunset drink, a table for friends or a special dinner, the experience is always rooted in the fire, the ocean and its flavors.
+            </p>
+          </div>
+          <div class="reveal overflow-hidden rounded-[32px] border border-sand/10 bg-charcoalSoft p-8">
+            <div class="space-y-6">
+              <div>
+                <p class="text-[10px] uppercase tracking-[0.35em] text-ember">The experience</p>
+                <p class="mt-3 text-lg leading-8 text-sand/80">Grill-driven flavor, bright coastal ingredients and a warm neighborhood setting in Puerto Vallarta.</p>
+              </div>
+              <div>
+                <p class="text-[10px] uppercase tracking-[0.35em] text-ember">Best time to come</p>
+                <p class="mt-3 text-lg leading-8 text-sand/80">Golden hour dinners, sunset cocktails and weekend nights with good energy.</p>
+              </div>
+              <div>
+                <p class="text-[10px] uppercase tracking-[0.35em] text-ember">Perfect for</p>
+                <p class="mt-3 text-lg leading-8 text-sand/80">Date nights, group dinners, beach-town celebrations and slow, flavorful evenings.</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="contacto" class="container mx-auto px-5 py-20 lg:px-8">
-        <div class="rounded-[40px] bg-carbon/80 p-10 text-crema shadow-2xl shadow-black/20 sm:p-14">
-          <div class="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
-            <div class="space-y-6">
-              <p class="text-sm uppercase tracking-[0.35em] text-terracota">Reservaciones</p>
-              <h2 class="text-4xl font-serif leading-tight">Haz tu reserva o pregunta con un mensaje directo.</h2>
-              <p class="max-w-2xl text-base leading-8 text-crema/80">
-                Desde desayunos hasta cenas con cócteles, estamos listos para recibirte con el mejor servicio y un ambiente cuidado en cada detalle.
-              </p>
-              <div class="flex flex-col gap-4 sm:flex-row">
-                <a href="https://wa.me/529626955184" class="btn-cta inline-flex min-h-[48px] items-center justify-center rounded-full bg-terracota px-8 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-crema transition duration-300 hover:scale-[1.02] hover:bg-[#9a3d18]">WhatsApp</a>
-                <a href="tel:+529626955184" class="inline-flex min-h-[48px] items-center justify-center rounded-full border border-crema/30 bg-white/10 px-8 py-4 text-sm font-semibold uppercase tracking-[0.2em] text-crema transition duration-300 hover:border-crema hover:bg-crema hover:text-carbon">Llamar ahora</a>
+      <section id="gallery" class="container mx-auto px-5 py-24 lg:px-8">
+        <div class="reveal text-center">
+          <p class="text-xs uppercase tracking-[0.44em] text-ember" data-i18n="gallery.label">PAL'MAR moments</p>
+          <h2 class="mt-4 font-display text-5xl text-sand sm:text-6xl" data-i18n="gallery.title">Memories worth sharing</h2>
+        </div>
+
+        <div class="mt-12 gallery-grid">
+          <figure class="reveal gallery-item overflow-hidden rounded-[22px] border border-sand/10 bg-charcoalSoft">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=80" alt="Interior del restaurante" loading="lazy" />
+          </figure>
+          <figure class="reveal gallery-item overflow-hidden rounded-[22px] border border-sand/10 bg-charcoalSoft">
+            <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=900&q=80" alt="Parrilla al fuego" loading="lazy" />
+          </figure>
+          <figure class="reveal gallery-item overflow-hidden rounded-[22px] border border-sand/10 bg-charcoalSoft">
+            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80" alt="Plato de mariscos" loading="lazy" />
+          </figure>
+          <figure class="reveal gallery-item overflow-hidden rounded-[22px] border border-sand/10 bg-charcoalSoft">
+            <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=900&q=80" alt="Cocktails" loading="lazy" />
+          </figure>
+          <figure class="reveal gallery-item overflow-hidden rounded-[22px] border border-sand/10 bg-charcoalSoft">
+            <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=900&q=80" alt="Terraza exterior" loading="lazy" />
+          </figure>
+          <figure class="reveal gallery-item overflow-hidden rounded-[22px] border border-sand/10 bg-charcoalSoft">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=80" alt="Paella con mariscos" loading="lazy" />
+          </figure>
+        </div>
+      </section>
+
+      <section class="bg-[#171b1f] py-24">
+        <div class="container mx-auto px-5 lg:px-8">
+          <div class="reveal text-center">
+            <p class="text-xs uppercase tracking-[0.44em] text-ember" data-i18n="reviews.label">What people say</p>
+            <h2 class="mt-4 font-display text-5xl text-sand sm:text-6xl" data-i18n="reviews.title">A place to repeat</h2>
+          </div>
+
+          <div class="mt-12 grid gap-6 lg:grid-cols-3">
+            <article class="reveal rounded-[26px] border border-sand/10 bg-charcoalSoft p-7">
+              <div class="mb-4 text-ember text-xl">★★★★★</div>
+              <p class="text-base leading-8 text-sand/80" data-i18n="reviews.one">“Amazing! The ceviche is one of the best I've ever had. The kikiriki salad is a must and the vibe is great.”</p>
+              <p class="mt-6 text-xs uppercase tracking-[0.25em] text-sand/60">Sarah M. · TripAdvisor</p>
+            </article>
+            <article class="reveal rounded-[26px] border border-sand/10 bg-charcoalSoft p-7">
+              <div class="mb-4 text-ember text-xl">★★★★★</div>
+              <p class="text-base leading-8 text-sand/80" data-i18n="reviews.two">“The bone marrow, the kraken and the ceviche were phenomenal. A trendy spot with good music and delicious drinks.”</p>
+              <p class="mt-6 text-xs uppercase tracking-[0.25em] text-sand/60">Carlos R. · Yelp</p>
+            </article>
+            <article class="reveal rounded-[26px] border border-sand/10 bg-charcoalSoft p-7">
+              <div class="mb-4 text-ember text-xl">★★★★★</div>
+              <p class="text-base leading-8 text-sand/80" data-i18n="reviews.three">“Contemporary design, shareable food and delicious drinks. The seafood paella is spectacular.”</p>
+              <p class="mt-6 text-xs uppercase tracking-[0.25em] text-sand/60">Emily T. · Google</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="visit" class="container mx-auto px-5 py-24 lg:px-8">
+        <div class="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+          <div class="reveal rounded-[32px] border border-sand/10 bg-charcoalSoft p-8 md:p-10">
+            <p class="text-xs uppercase tracking-[0.4em] text-ember" data-i18n="visit.label">Visit us</p>
+            <h2 class="mt-4 font-display text-5xl text-sand" data-i18n="visit.title">We’re waiting for you</h2>
+
+            <div class="mt-8 space-y-6 text-sand/80">
+              <div class="flex gap-4">
+                <div class="mt-1 text-xl text-ember">◌</div>
+                <div>
+                  <p class="text-xs uppercase tracking-[0.25em] text-sand/50" data-i18n="visit.addressLabel">Address</p>
+                  <p class="mt-2 text-base leading-7" data-i18n="visit.address">Ignacio L. Vallarta 268-B, Zona Romántica, Puerto Vallarta, Jalisco, Mexico</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div class="mt-1 text-xl text-ember">◌</div>
+                <div>
+                  <p class="text-xs uppercase tracking-[0.25em] text-sand/50" data-i18n="visit.hoursLabel">Hours</p>
+                  <p class="mt-2 text-base leading-7" data-i18n="visit.hours">Monday to Sunday · 1 PM – 11 PM</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div class="mt-1 text-xl text-ember">◌</div>
+                <div>
+                  <p class="text-xs uppercase tracking-[0.25em] text-sand/50" data-i18n="visit.phoneLabel">Phone</p>
+                  <p class="mt-2 text-base leading-7"><a href="tel:+523226882097" class="text-ember hover:text-emberSoft">+52 322 688 2097</a></p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+               <div class="mt-1 text-xl text-ember">◌</div>
+               <div>
+                 <p class="text-xs uppercase tracking-[0.25em] text-sand/50">WhatsApp</p>
+                 <p class="mt-2 text-base leading-7"><a href="https://wa.me/523226882097" target="_blank" rel="noreferrer" class="text-ember hover:text-emberSoft">+52 322 688 2097</a></p>
+               </div>
+              </div>
+              <div class="flex gap-4">
+               <div class="mt-1 text-xl text-ember">◌</div>
+               <div>
+                 <p class="text-xs uppercase tracking-[0.25em] text-sand/50">Instagram</p>
+                 <p class="mt-2 text-base leading-7"><a href="https://www.instagram.com/palmarpv/" target="_blank" rel="noreferrer" class="text-ember hover:text-emberSoft">@palmarpv</a></p>
+               </div>
               </div>
             </div>
-            <div class="space-y-3 rounded-[32px] bg-[#F6EFE7]/95 p-8 text-carbon shadow-xl">
-              <p class="text-sm uppercase tracking-[0.35em] text-terracota">Prueba social</p>
-              <p class="text-3xl font-semibold">4.8/5</p>
-              <p class="text-sm leading-7 text-carbon/70">648 reseñas en Google respaldan nuestra experiencia mediterránea con un toque local.</p>
-              <div class="grid gap-3 rounded-3xl bg-carbon/5 p-6">
-                <div class="flex items-center justify-between text-sm text-carbon/70">
-                  <span>Tipo:</span><span>Restaurante español / tapas / desayunos / bar de vinos</span>
-                </div>
-                <div class="flex items-center justify-between text-sm text-carbon/70">
-                  <span>Precio:</span><span>$$ (medio-alto)</span>
-                </div>
-                <div class="flex items-center justify-between text-sm text-carbon/70">
-                  <span>Ubicación:</span><span>Tapachula, Chiapas</span>
+
+            <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+              <a href="https://www.google.com/maps/search/?api=1&query=PALMAR+Seafood+%26+Grill+Garage+Puerto+Vallarta" target="_blank" rel="noreferrer" class="inline-flex min-h-[48px] items-center justify-center rounded-full border border-sand/40 px-6 py-3 text-xs uppercase tracking-[0.25em] text-sand transition hover:border-ember hover:text-ember" data-i18n="visit.directions">Get directions</a>
+              <a href="https://wa.me/523226882097" target="_blank" rel="noreferrer" class="inline-flex min-h-[48px] items-center justify-center rounded-full bg-ember px-6 py-3 text-xs uppercase tracking-[0.25em] text-white transition hover:scale-[1.02] hover:bg-[#ba581e]">WhatsApp</a>
+            </div>
+          </div>
+
+          <div class="reveal overflow-hidden rounded-[32px] border border-sand/10 bg-charcoalSoft">
+            <iframe
+              title="Mapa de PAL'MAR"
+              src="https://www.google.com/maps?q=Ignacio%20L.%20Vallarta%20268-B%20Puerto%20Vallarta&output=embed"
+              class="h-[520px] w-full border-0"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <section id="reserve" class="bg-[#171b1f] py-24">
+        <div class="container mx-auto px-5 lg:px-8">
+          <div class="rounded-[32px] border border-sand/10 bg-charcoalSoft p-8 md:p-12">
+            <div class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+              <div class="reveal">
+                <p class="text-xs uppercase tracking-[0.44em] text-ember" data-i18n="reserve.label">Reserve your table</p>
+                <h2 class="mt-4 font-display text-5xl text-sand" data-i18n="reserve.title">Secure your spot and live the PAL'MAR experience.</h2>
+                <div class="mt-8 space-y-4 text-sand/75">
+                  <p data-i18n="reserve.hours">Monday to Sunday · 1 PM – 11 PM</p>
+                  <p><a href="tel:+523226882097" class="text-ember hover:text-emberSoft">+52 322 688 2097</a></p>
                 </div>
               </div>
+
+              <form class="reveal grid gap-4 md:grid-cols-2" action="#" method="post">
+                <label class="md:col-span-1">
+                  <span class="mb-2 block text-[10px] uppercase tracking-[0.3em] text-sand/60" data-i18n="form.nameLabel">Name</span>
+                  <input type="text" class="w-full rounded-full border border-sand/20 bg-transparent px-5 py-3 text-sand placeholder:text-sand/35 focus:border-ember focus:outline-none" data-i18n-placeholder="form.namePlaceholder" placeholder="Your name" />
+                </label>
+                <label class="md:col-span-1">
+                  <span class="mb-2 block text-[10px] uppercase tracking-[0.3em] text-sand/60" data-i18n="form.emailLabel">Email</span>
+                  <input type="email" class="w-full rounded-full border border-sand/20 bg-transparent px-5 py-3 text-sand placeholder:text-sand/35 focus:border-ember focus:outline-none" data-i18n-placeholder="form.emailPlaceholder" placeholder="Your email" />
+                </label>
+                <label class="md:col-span-1">
+                  <span class="mb-2 block text-[10px] uppercase tracking-[0.3em] text-sand/60" data-i18n="form.phoneLabel">Phone (optional)</span>
+                  <input type="tel" class="w-full rounded-full border border-sand/20 bg-transparent px-5 py-3 text-sand placeholder:text-sand/35 focus:border-ember focus:outline-none" data-i18n-placeholder="form.phonePlaceholder" placeholder="Your phone" />
+                </label>
+                <label class="md:col-span-1">
+                  <span class="mb-2 block text-[10px] uppercase tracking-[0.3em] text-sand/60" data-i18n="form.dateLabel">Date</span>
+                  <input type="date" class="w-full rounded-full border border-sand/20 bg-transparent px-5 py-3 text-sand focus:border-ember focus:outline-none" />
+                </label>
+                <label class="md:col-span-2">
+                  <span class="mb-2 block text-[10px] uppercase tracking-[0.3em] text-sand/60" data-i18n="form.messageLabel">Message</span>
+                  <textarea rows="4" class="w-full rounded-[24px] border border-sand/20 bg-transparent px-5 py-3 text-sand placeholder:text-sand/35 focus:border-ember focus:outline-none" data-i18n-placeholder="form.messagePlaceholder" placeholder="Tell us about your reservation"></textarea>
+                </label>
+                <div class="md:col-span-2 flex justify-end">
+                  <button type="submit" class="inline-flex min-h-[48px] items-center justify-center rounded-full bg-ember px-7 py-3 text-xs uppercase tracking-[0.25em] text-white transition hover:scale-[1.02] hover:bg-[#ba581e]" data-i18n="form.submit">Send message</button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="bg-black text-crema">
-      <div class="container mx-auto px-5 py-14 lg:px-8">
-        <div class="grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-start">
-          <div class="space-y-6">
-            <a href="#hero" class="text-2xl font-serif tracking-[0.24em]">Terraza</a>
-            <p class="max-w-xl text-sm leading-7 text-crema/70">
-              Restaurante español en Tapachula con terraza, desayunos desde las 8 AM, coctelería premium y una experiencia mediterránea moderna.
-            </p>
-            <div class="flex items-center gap-4">
-              <a href="https://www.instagram.com/terrazatapaslounge/" target="_blank" rel="noreferrer" class="transition hover:text-terracota">Instagram</a>
-              <a href="https://www.facebook.com/TerrazaTapasLounge/" target="_blank" rel="noreferrer" class="transition hover:text-terracota">Facebook</a>
+    <footer class="border-t border-sand/10 bg-charcoal py-12">
+      <div class="container mx-auto px-5 lg:px-8">
+        <div class="grid gap-10 md:grid-cols-3">
+          <div>
+            <a href="#home" class="font-display text-4xl text-sand">PAL'MAR</a>
+            <p class="mt-4 max-w-xs text-sm leading-7 text-sand/60" data-i18n="footer.tagline">Wood-fired seafood in the heart of Puerto Vallarta.</p>
+          </div>
+
+          <div>
+            <p class="text-[10px] uppercase tracking-[0.3em] text-sand/50" data-i18n="footer.navigation">Navigation</p>
+            <div class="mt-4 space-y-3 text-sm text-sand/75">
+              <a href="#home" class="block" data-i18n="nav.home">Home</a>
+              <a href="#story" class="block" data-i18n="nav.story">Story</a>
+              <a href="#menu" class="block" data-i18n="nav.menu">Menu</a>
+              <a href="#gallery" class="block" data-i18n="nav.gallery">Gallery</a>
+              <a href="#visit" class="block" data-i18n="nav.visit">Visit</a>
             </div>
           </div>
-          <div class="grid gap-4 sm:grid-cols-2">
-            <div>
-              <h3 class="mb-3 text-sm uppercase tracking-[0.28em] text-terracota">Contacto</h3>
-              <p class="text-sm leading-7 text-crema/80">+52 962 695 5184</p>
-              <p class="text-sm leading-7 text-crema/80">terrazatb@publisite.mx</p>
-            </div>
-            <div>
-              <h3 class="mb-3 text-sm uppercase tracking-[0.28em] text-terracota">Horario</h3>
-              <p class="text-sm leading-7 text-crema/80">Lunes a Sábado: 8:00 AM – 11:00 PM</p>
-              <p class="text-sm leading-7 text-crema/80">Domingo: 8:00 AM – 10:00 PM</p>
+
+          <div>
+            <p class="text-[10px] uppercase tracking-[0.3em] text-sand/50" data-i18n="footer.contact">Contact</p>
+            <div class="mt-4 space-y-3 text-sm text-sand/75">
+              <p data-i18n="footer.hours">Monday to Sunday · 1 PM – 11 PM</p>
+              <a href="tel:+523226882097" class="block text-ember">+52 322 688 2097</a>
+              <a href="https://wa.me/523226882097" target="_blank" rel="noreferrer" class="block text-ember">WhatsApp</a>
+              <a href="https://www.instagram.com/palmarpv/" target="_blank" rel="noreferrer" class="block text-ember">Instagram @palmarpv</a>
+              <p data-i18n="footer.address">Ignacio L. Vallarta 268-B,<br />Zona Romántica, Puerto Vallarta</p>
             </div>
           </div>
         </div>
-        <div class="mt-10 border-t border-crema/10 pt-6 text-center text-xs text-crema/60">
-          © 2026 Terraza: Tapas Lounge. Todos los derechos reservados.
+
+        <div class="mt-10 border-t border-sand/10 pt-6 text-center text-xs uppercase tracking-[0.25em] text-sand/40" data-i18n="footer.rights">
+          © 2026 PAL'MAR Seafood & Grill Garage. All rights reserved.
         </div>
       </div>
     </footer>
-
-    <div id="lightbox" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 p-5">
-      <button id="lightboxClose" class="absolute right-5 top-5 rounded-full bg-crema/10 p-3 text-crema transition hover:bg-crema/20">
-        <span class="sr-only">Cerrar imagen</span>
-        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18" stroke-linecap="round"/></svg>
-      </button>
-      <img id="lightboxImage" src="" alt="Imagen ampliada" class="max-h-full max-w-full rounded-[32px] shadow-2xl" />
-    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
@@ -451,39 +557,20 @@
       {
         "@context": "https://schema.org",
         "@type": "Restaurant",
-        "name": "Terraza: Tapas Lounge",
-        "image": "assets/images/hero.jpg",
-        "@id": "",
-        "url": "https://terrazatapaslounge.example.com",
-        "telephone": "+529626955184",
+        "name": "PAL'MAR Seafood & Grill Garage",
+        "description": "Seafood restaurant with wood-fire grill in Puerto Vallarta.",
+        "telephone": "+523226882097",
+        "servesCuisine": ["Seafood", "Mexican"],
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "Carretera Puerto Madero Km 3.5, Plaza Paseo Hortensias, Local 1, Los Naranjos, Ecológico Las Hortencias",
-          "addressLocality": "Tapachula de Córdova y Ordóñez",
-          "addressRegion": "Chiapas",
-          "postalCode": "30700",
+          "streetAddress": "Ignacio L. Vallarta 268-B",
+          "addressLocality": "Puerto Vallarta",
+          "addressRegion": "Jalisco",
           "addressCountry": "MX"
         },
-        "openingHoursSpecification": [
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-            "opens": "08:00",
-            "closes": "23:00"
-          },
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": "Sunday",
-            "opens": "08:00",
-            "closes": "22:00"
-          }
-        ],
+        "openingHours": "Mo-Su 13:00-23:00",
         "priceRange": "$$",
-        "servesCuisine": ["Española", "Tapas", "Mediterránea"],
-        "sameAs": [
-          "https://www.instagram.com/terrazatapaslounge/",
-          "https://www.facebook.com/TerrazaTapasLounge/"
-        ]
+        "url": "https://example.com"
       }
     </script>
   </body>
