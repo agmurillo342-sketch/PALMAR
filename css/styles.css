@@ -107,6 +107,8 @@ body .text-charcoal {
 
 #mainNav {
   background: transparent;
+  opacity: 1;
+  transform: none;
 }
 
 #mainNav nav {
