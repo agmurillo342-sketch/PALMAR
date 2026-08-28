@@ -1,6 +1,7 @@
 const nav = document.getElementById('mainNav');
 const menuToggle = document.getElementById('menuToggle');
 const mobileMenu = document.getElementById('mobileMenu');
+const menuModal = document.getElementById('menuModal');
 
 const translations = {
   es: {
@@ -205,6 +206,34 @@ const initMenu = () => {
   });
 };
 
+const initMenuModal = () => {
+  if (!menuModal) return;
+  const openModal = () => {
+    menuModal.classList.add('is-open');
+    menuModal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  };
+  const closeModal = () => {
+    menuModal.classList.remove('is-open');
+    menuModal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  };
+
+  document.querySelectorAll('main a[href="#menu"], [data-menu-open]').forEach((trigger) => {
+    trigger.addEventListener('click', (event) => {
+      event.preventDefault();
+      openModal();
+    });
+  });
+  menuModal.querySelector('[data-menu-close]')?.addEventListener('click', closeModal);
+  menuModal.addEventListener('click', (event) => {
+    if (event.target === menuModal) closeModal();
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && menuModal.classList.contains('is-open')) closeModal();
+  });
+};
+
 const initReveal = () => {
   const reveals = document.querySelectorAll('.reveal');
 
@@ -244,6 +273,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const savedLang = localStorage.getItem('palmarLang') || 'es';
   setNavState();
   initMenu();
+  initMenuModal();
   initReveal();
   initGsap();
   applyLanguage(savedLang);

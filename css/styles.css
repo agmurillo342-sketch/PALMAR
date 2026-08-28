@@ -293,3 +293,96 @@ iframe {
   border: 0;
   display: block;
 }
+
+#menu .container > .mt-12 {
+  display: none;
+}
+
+#menu .container > .mt-10 {
+  display: none;
+}
+
+.menu-modal {
+  align-items: center;
+  background: rgba(5, 6, 7, 0.84);
+  display: none;
+  inset: 0;
+  justify-content: center;
+  padding: 1rem;
+  position: fixed;
+  z-index: 100;
+}
+
+.menu-modal.is-open {
+  display: flex;
+}
+
+.menu-modal__panel {
+  background: #171b1f;
+  border: 1px solid rgba(244, 239, 231, 0.16);
+  border-radius: 28px;
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.55);
+  max-height: min(90vh, 760px);
+  max-width: 980px;
+  overflow: auto;
+  padding: 2rem;
+  position: relative;
+  width: 100%;
+}
+
+.menu-modal__close {
+  background: transparent;
+  border: 1px solid rgba(244, 239, 231, 0.3);
+  border-radius: 999px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.3rem;
+  height: 2.5rem;
+  line-height: 1;
+  position: absolute;
+  right: 1.25rem;
+  top: 1.25rem;
+  width: 2.5rem;
+}
+
+.menu-modal__grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.menu-modal__item {
+  border-bottom: 1px solid rgba(244, 239, 231, 0.12);
+  padding-bottom: 1rem;
+}
+
+.menu-modal__item h3 {
+  color: #fff;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.menu-modal__item p {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin: 0.45rem 0 0;
+}
+
+.menu-modal__price {
+  color: #d9702d;
+  float: right;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+}
+
+@media (min-width: 640px) {
+  .menu-modal__panel {
+    padding: 3rem;
+  }
+
+  .menu-modal__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
