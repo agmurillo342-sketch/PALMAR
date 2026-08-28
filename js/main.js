@@ -231,18 +231,6 @@ const initGsap = () => {
   if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
     gsap.registerPlugin(ScrollTrigger);
 
-    gsap.from('.reveal', {
-      opacity: 0,
-      y: 26,
-      duration: 1,
-      ease: 'power2.out',
-      stagger: 0.12,
-      scrollTrigger: {
-        trigger: 'main',
-        start: 'top 80%'
-      }
-    });
-
     gsap.from('#mainNav', {
       opacity: 0,
       y: -20,
