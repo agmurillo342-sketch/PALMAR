@@ -234,6 +234,32 @@ const initMenuModal = () => {
   });
 };
 
+const initReservationForm = () => {
+  const form = document.getElementById('reservationForm');
+  if (!form) return;
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    const language = document.documentElement.lang === 'en' ? 'en' : 'es';
+    const name = document.getElementById('reservationName').value.trim();
+    const email = document.getElementById('reservationEmail').value.trim();
+    const phone = document.getElementById('reservationPhone').value.trim() || '-';
+    const date = document.getElementById('reservationDate').value;
+    const message = document.getElementById('reservationMessage').value.trim() || '-';
+    const text = language === 'en'
+      ? `Hello PAL'MAR, I would like to request a reservation.\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nDate: ${date}\nMessage: ${message}`
+      : `Hola PAL'MAR, me gustaría solicitar una reservación.\n\nNombre: ${name}\nCorreo: ${email}\nTeléfono: ${phone}\nFecha: ${date}\nMensaje: ${message}`;
+
+    window.location.href = `https://wa.me/523226882097?text=${encodeURIComponent(text)}`;
+  });
+};
+
 const initReveal = () => {
   const reveals = document.querySelectorAll('.reveal');
 
@@ -268,6 +294,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setNavState();
   initMenu();
   initMenuModal();
+  initReservationForm();
   initReveal();
   initGsap();
   applyLanguage(savedLang);
